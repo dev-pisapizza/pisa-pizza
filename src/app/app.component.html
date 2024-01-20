@@ -30,18 +30,18 @@
   <section class="menu mt-4">
     <h2>Speisekarte</h2>
     <div class="links-grid">
-      <div routerLinkActive="active" [routerLink]="['/packages']" class="link">
+      <div
+        routerLinkActive="active"
+        [class.active]="isActive()"
+        [routerLink]="['/packages']"
+        class="link"
+      >
         <div class="mb-05">
           <img src="assets/img/package.webp" alt="Pakete" />
         </div>
         Pakete
       </div>
-      <div
-        [class.active]="isActive()"
-        class="link"
-        [routerLink]="['/pizzas']"
-        routerLinkActive="active"
-      >
+      <div class="link" [routerLink]="['/pizzas']" routerLinkActive="active">
         <div class="mb-05">
           <img src="assets/img/pizza.webp" alt="Pizza" />
         </div>

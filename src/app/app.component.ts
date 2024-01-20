@@ -15,6 +15,6 @@ export class AppComponent {
 
   isActive(): boolean {
     const url = this.router.url;
-    return url === '/pizzas' || url === '/';
+    return url === '/packages' || url === '/';
   }
 }

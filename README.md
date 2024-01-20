@@ -1,27 +1,18 @@
-# Pisa Pizza Schwaig 🍕
+# Pisa Pizza Schwaig
 
-## Edit Menu
+![as](doc/page.png)
 
-### Edit Packages
+## Menu
 
-TODO: ...
+To change the menu (items, prices, descriptions, ...), edit the following files, commit and push.
 
-### Edit Pizzas
+- Packages: [src/app/packages/packages.ts](src/app/packages/packages.ts)
+- Pizzas: [src/app/pizzas/pizzas.ts](src/app/pizzas/pizzas.ts)
+- Pastas: [src/app/pastas/pastas.ts](src/app/pastas/pastas.ts)
+- Salads: [src/app/salads/salads.ts](src/app/salads/salads.ts)
+- Drinks: [src/app/drinks/drinks.ts](src/app/drinks/drinks.ts)
+- Announcements: [src/app/announcements/announcements.ts](src/app/announcements/announcements.ts)
 
-TODO: ...
+## Deployment
 
-### Edit Pastas
-
-TODO: ...
-
-### Edit Salads
-
-TODO: ...
-
-### Edit Drinks
-
-TODO: ...
-
-## Deploy
-
-Just commit and push to GitHub. The CI/CD will deploy automatically 🚀.
+Just commit and push to the **main** branch. The CI/CD will deploy automatically to GitHub Pages 🚀.
