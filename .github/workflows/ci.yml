@@ -21,7 +21,11 @@ jobs:
         run: npm install
 
       - name: Build
-        run: npm run build --- --base-href \"https://dev-pisapizza.github.io/pisa-pizza/\"
+        run: |
+          - npm run build --- --base-href \"https://dev-pisapizza.github.io/pisa-pizza/\"
+          - mv dist/pisa-pizza/* dist/
+          - mv dist/browser/* dist/
+          - rm dist/browser/ -rf
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
