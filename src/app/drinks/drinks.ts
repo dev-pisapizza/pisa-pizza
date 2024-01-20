@@ -55,7 +55,7 @@ export const drinks: Drink[] = [
     price: 3,
   },
   {
-    name: 'Bier (Helles)',
+    name: 'Bier (verschiedene Sorten)',
     liters: 0.5,
     price: 2.5,
   },
