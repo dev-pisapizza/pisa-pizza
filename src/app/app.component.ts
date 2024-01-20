@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { AnnouncementsComponent } from './announcements/announcements.component';
@@ -10,8 +10,16 @@ import { AnnouncementsComponent } from './announcements/announcements.component'
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   constructor(private readonly router: Router) {}
+
+  ngOnInit(): void {
+    const route = new URLSearchParams(window.location.search).get('route');
+
+    if (route) {
+      this.router.navigateByUrl(`/${route}`);
+    }
+  }
 
   isActive(): boolean {
     const url = this.router.url;
