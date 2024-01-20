@@ -22,7 +22,9 @@ jobs:
 
       - name: Build
         run: |
-          npm run build --- --base-href https://dev-pisapizza.github.io/pisa-pizza/
+          URL=https://dev-pisapizza.github.io/pisa-pizza
+          npm run build --- --base-href $URL/
+          sed -i "s|{{URL}}|$URL|g" dist/sitemap.xml
           mv dist/pisa-pizza/* dist/
           mv dist/browser/* dist/
           rm dist/browser/ -rf
