@@ -1,0 +1,100 @@
+<header class="header">
+  <div class="header-content">
+    <h1 class="header-title">
+      <span class="header-title-green">Pisa&nbsp;</span>
+      <span class="header-title-white">Pizza&nbsp;</span>
+      <span class="header-title-red mr-05">Schwaig</span>
+    </h1>
+    <p class="header-subtitle">Echt italienisch, schnell geliefert - Ihr Lieferdienst in Schwaig</p>
+  </div>
+</header>
+
+<main class="container">
+  <section class="about">
+    <h1>Frische italienische Küche direkt zu Ihnen</h1>
+    <p><strong>Telefon: </strong> <u>0911 / 71516143</u></p>
+    <p><strong>Öffnungszeiten:</strong> Dienstag bis Sonntag, 17:00 bis 21:00 Uhr</p>
+    <p>
+      <strong>Kostenlose Lieferung:</strong>
+      Ab einem Bestellwert von <u>15 €</u> liefern wir kostenlos nach
+      <i>Schwaig, Behringersdorf, Röthenbach a.d. Pegnitz, Renzenhof, Rückersdorf und Laufamholz</i>
+      und ab <u>30 €</u> bis nach <i>Lauf a.d. Pegnitz (Stadtgebiet)</i>.
+    </p>
+    <p>
+      <strong>Geschenk:</strong> Ab einem Bestellwert von 60 € gibt es eine Flasche Wein gratis
+      dazu.
+    </p>
+    <p><strong>Kartenzahlung:</strong> Möglich ab einem Bestellwert von 15 € (nur bei Abholung).</p>
+  </section>
+
+  <section class="menu mt-4">
+    <h2>Speisekarte</h2>
+    <div class="links-grid">
+      <div routerLinkActive="active" [routerLink]="['/packages']" class="link">
+        <div class="mb-05">
+          <img src="assets/img/package.webp" alt="Pakete" />
+        </div>
+        Pakete
+      </div>
+      <div
+        [class.active]="isActive()"
+        class="link"
+        [routerLink]="['/pizzas']"
+        routerLinkActive="active"
+      >
+        <div class="mb-05">
+          <img src="assets/img/pizza.webp" alt="Pizza" />
+        </div>
+        Pizzas
+      </div>
+      <div class="link" [routerLink]="['/pasta']" routerLinkActive="active">
+        <div class="mb-05">
+          <img src="assets/img/pasta.webp" alt="Pasta" />
+        </div>
+        Pasta
+      </div>
+      <div class="link" [routerLink]="['/salats']" routerLinkActive="active">
+        <div class="mb-05">
+          <img src="assets/img/salat.webp" alt="Salate" />
+        </div>
+        Salate
+      </div>
+      <div routerLinkActive="active" [routerLink]="['/drinks']" class="link">
+        <div class="mb-05">
+          <img src="assets/img/drinks.webp" alt="Drinks" />
+        </div>
+        Getränke
+      </div>
+    </div>
+
+    <router-outlet></router-outlet>
+
+    <p class="ta-center">
+      <small>
+        <sup>1</sup>Konservierungsstoffe, <sup>2</sup>Antioxidationsmittel, <sup>3</sup>Farbstoff,
+        <sup>4</sup> Geschmacksverstärker, <sup>5</sup>Lebensmittelfarbe, <sup>6</sup>Koffeinhaltig.
+        Bei Fragen zu Allergenen wenden Sie sich bitte an unseren Service, wir halten Informationen
+        an der Theke für Sie bereit.
+      </small>
+    </p>
+  </section>
+</main>
+
+<section class="imprint">
+  <div class="imprintContent">
+    <h2>Impressum</h2>
+    <p>
+      <strong>Pisa Pizza</strong>
+      <br />
+      Behringersdorferstraße 5a
+      <br />
+      90571 Schwaig
+    </p>
+    <p>
+      Telefon: 0911 / 71516143
+      <br />
+      E-Mail: <a href="mailto:info@pisapizza.de">info{{ '@' }}pisapizza.de</a>
+    </p>
+    <p>Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV: H. Gök</p>
+  </div>
+</section>

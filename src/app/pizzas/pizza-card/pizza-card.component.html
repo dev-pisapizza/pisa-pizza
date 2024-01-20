@@ -1,0 +1,27 @@
+<div class="mt-2 p-2 pizza">
+  <div *ngIf="pizza.tag">
+    <span *ngIf="pizza.tag === 'new'" class="badge badge-new">neu ✨</span>
+    <span *ngIf="pizza.tag === 'bestseller'" class="badge badge-bestseller">bestseller 🔥</span>
+    <br />
+  </div>
+  <small
+    ><i>Nr. {{ pizza.id }}</i></small
+  >
+  <br />
+  <strong class="mr-05">{{ pizza.name }}</strong>
+  <br />
+  <small [innerHTML]="pizza.description"></small>
+  <ul class="prices-container">
+    <li>
+      <small>Klein (Ø 28 cm): <span [innerHTML]="pizza.price.small | appPrice: true"></span></small>
+    </li>
+    <li>
+      <small>Groß (Ø 32 cm): <span [innerHTML]="pizza.price.large | appPrice: true"></span></small>
+    </li>
+    <li>
+      <small
+        >Party (60 x 40 cm): <span [innerHTML]="pizza.price.party | appPrice: true"></span
+      ></small>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,14 @@
+<div class="mt-2 p-2 drink">
+  <div *ngIf="drink.tag">
+    <span *ngIf="drink.tag === 'new'" class="badge badge-new">neu ✨</span>
+    <span *ngIf="drink.tag === 'bestseller'" class="badge badge-bestseller">bestseller 🔥</span>
+    <br />
+  </div>
+  <strong class="mr-05">{{ drink.name }}</strong>
+  <br />
+  <small>{{ drink.liters | appGermanNumber }}L</small>
+  <br />
+  <small>
+    <span [innerHTML]="drink.price | appPrice: true"></span>
+  </small>
+</div>

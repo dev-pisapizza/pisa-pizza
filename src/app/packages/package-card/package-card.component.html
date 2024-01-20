@@ -1,0 +1,27 @@
+<div class="mt-2 p-2 package">
+  <div *ngIf="package.tag">
+    <span *ngIf="package.tag === 'new'" class="badge badge-new">neu ✨</span>
+    <span *ngIf="package.tag === 'bestseller'" class="badge badge-bestseller">bestseller 🔥</span>
+    <br />
+  </div>
+  <small
+    ><i>Nr. {{ package.id }}</i></small
+  >
+  <br />
+  <strong class="mr-05">{{ package.description }}</strong>
+
+  <ul class="prices-container">
+    <li>
+      <small
+        >Klein (Ø 28 cm):
+        <span [innerHTML]="package.price.normal | appPrice: true"></span>
+      </small>
+    </li>
+    <li>
+      <small
+        >Groß (Ø 32 cm):
+        <span [innerHTML]="package.price.large | appPrice: true"></span>
+      </small>
+    </li>
+  </ul>
+</div>

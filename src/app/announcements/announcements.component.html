@@ -1,0 +1,6 @@
+<ng-container *ngFor="let announcement of announcements">
+  <app-annoucement
+    [announcement]="announcement"
+    (close)="onAnnouncementClose(announcement)"
+  ></app-annoucement>
+</ng-container>

@@ -1,0 +1,18 @@
+<div class="mt-2 p-2 pasta">
+  <div *ngIf="pasta.tag">
+    <span *ngIf="pasta.tag === 'new'" class="badge badge-new">neu ✨</span>
+    <span *ngIf="pasta.tag === 'bestseller'" class="badge badge-bestseller">bestseller 🔥</span>
+    <br />
+  </div>
+  <small
+    ><i>Nr. {{ pasta.id }}</i></small
+  >
+  <br />
+  <strong class="mr-05">{{ pasta.name }}</strong>
+  <br />
+  <small [innerHTML]="pasta.description"></small>
+  <br />
+  <small>
+    <u>{{ pasta.price | appPrice }}</u></small
+  >
+</div>
