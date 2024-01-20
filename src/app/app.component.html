@@ -27,7 +27,7 @@
     <p><strong>Kartenzahlung:</strong> Möglich ab einem Bestellwert von 15 € (nur bei Abholung).</p>
   </section>
 
-  <section class="menu mt-4">
+  <section id="menu" class="menu mt-4">
     <h2>Speisekarte</h2>
     <div class="links-grid">
       <div
@@ -98,3 +98,7 @@
     <p>Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV: H. Gök</p>
   </div>
 </section>
+
+<button id="scrollUp" [style.display]="windowScrolled ? 'block' : 'none'" (click)="scrollToTop()">
+  <small><strong>↑ Speisekarte</strong></small>
+</button>

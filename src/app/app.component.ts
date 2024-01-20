@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 import { AnnouncementsComponent } from './announcements/announcements.component';
@@ -11,6 +11,7 @@ import { AnnouncementsComponent } from './announcements/announcements.component'
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
+  windowScrolled = false;
   constructor(private readonly router: Router) {}
 
   ngOnInit(): void {
@@ -24,5 +25,17 @@ export class AppComponent implements OnInit {
   isActive(): boolean {
     const url = this.router.url;
     return url === '/packages' || url === '/';
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    this.windowScrolled = window.scrollY > 1300;
+  }
+
+  scrollToTop() {
+    const speisekarteElement = document.getElementById('menu');
+    if (speisekarteElement) {
+      speisekarteElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
 }
