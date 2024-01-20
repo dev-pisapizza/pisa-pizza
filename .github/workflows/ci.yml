@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run build --- --base-href \"https://dev-pisapizza.github.io/pisa-pizza/\"
+          npm run build --- --base-href https://dev-pisapizza.github.io/pisa-pizza/
           mv dist/pisa-pizza/* dist/
           mv dist/browser/* dist/
           rm dist/browser/ -rf
