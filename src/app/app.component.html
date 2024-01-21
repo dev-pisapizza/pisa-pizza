@@ -1,18 +1,20 @@
 <header class="header">
   <div class="header-content">
     <h1 class="header-title">
-      <span class="header-title-green">Pisa&nbsp;</span>
-      <span class="header-title-white">Pizza&nbsp;</span>
+      <span class="header-title-green">Pisa </span>
+      <span class="header-title-white">Pizza </span>
       <span class="header-title-red mr-05">Schwaig</span>
     </h1>
-    <p class="header-subtitle">Echt italienisch, schnell geliefert - Ihr Lieferdienst in Schwaig</p>
+    <p class="header-subtitle">
+      Echt italienisch, schnell geliefert - Ihr Lieferdienst in Schwaig und Umgebung
+    </p>
   </div>
 </header>
 
 <main class="container">
   <section class="about">
-    <h1>Frische italienische Küche direkt zu Ihnen</h1>
-    <p><strong>Telefon: </strong> <u>0911 / 71516143</u></p>
+    <h1 class="cool-font">Frische italienische Küche direkt zu Ihnen</h1>
+    <p><strong>Telefon: </strong> <a href="tel:091171516143">0911 71516143</a></p>
     <p><strong>Öffnungszeiten:</strong> Dienstag bis Sonntag, 17:00 bis 21:00 Uhr</p>
     <p>
       <strong>Kostenlose Lieferung:</strong>
@@ -31,17 +33,11 @@
     <h2>Speisekarte</h2>
     <div class="links-grid">
       <div
-        routerLinkActive="active"
-        [class.active]="isActive()"
-        [routerLink]="['/packages']"
         class="link"
+        [class.active]="isActive()"
+        [routerLink]="['/pizzas']"
+        routerLinkActive="active"
       >
-        <div class="mb-05">
-          <img src="assets/img/package.webp" alt="Pakete" />
-        </div>
-        Pakete
-      </div>
-      <div class="link" [routerLink]="['/pizzas']" routerLinkActive="active">
         <div class="mb-05">
           <img src="assets/img/pizza.webp" alt="Pizza" />
         </div>
@@ -58,6 +54,12 @@
           <img src="assets/img/salat.webp" alt="Salate" />
         </div>
         Salate
+      </div>
+      <div routerLinkActive="active" [routerLink]="['/packages']" class="link">
+        <div class="mb-05">
+          <img src="assets/img/package.webp" alt="Pakete" />
+        </div>
+        Pakete
       </div>
       <div routerLinkActive="active" [routerLink]="['/drinks']" class="link">
         <div class="mb-05">
@@ -91,7 +93,7 @@
       90571 Schwaig
     </p>
     <p>
-      Telefon: 0911 / 71516143
+      Telefon: <a href="tel:091171516143">0911 71516143</a>
       <br />
       E-Mail: <a href="mailto:info@pisapizza.de">info{{ '@' }}pisapizza.de</a>
     </p>
@@ -100,5 +102,5 @@
 </section>
 
 <button id="scrollUp" [style.display]="windowScrolled ? 'block' : 'none'" (click)="scrollToTop()">
-  <small><strong>↑ Speisekarte</strong></small>
+  <small>↑ Speisekarte</small>
 </button>

@@ -14,13 +14,13 @@
     <li>
       <small
         >Klein (Ø 28 cm):
-        <span [innerHTML]="package.price.normal | appPrice: true"></span>
+        <span>{{ package.price.normal | appPrice }}</span>
       </small>
     </li>
     <li>
       <small
         >Groß (Ø 32 cm):
-        <span [innerHTML]="package.price.large | appPrice: true"></span>
+        <span>{{ package.price.large | appPrice }}</span>
       </small>
     </li>
   </ul>

@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
 
   isActive(): boolean {
     const url = this.router.url;
-    return url === '/packages' || url === '/';
+    return url === '/pizzas' || url === '/';
   }
 
   @HostListener('window:scroll', [])

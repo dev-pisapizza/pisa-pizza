@@ -9,6 +9,6 @@
   <small>{{ drink.liters | appGermanNumber }}L</small>
   <br />
   <small>
-    <span [innerHTML]="drink.price | appPrice: true"></span>
+    <span>{{ drink.price | appPrice }}</span>
   </small>
 </div>

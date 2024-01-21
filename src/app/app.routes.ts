@@ -8,7 +8,7 @@ import { SaladsComponent } from './salads/salads.component';
 export const routes: Routes = [
   {
     path: '',
-    component: PackagesComponent,
+    component: PizzasComponent,
   },
   {
     path: 'packages',

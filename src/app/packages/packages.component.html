@@ -1,6 +1,9 @@
 <div class="mt-2">
-  <app-package-card
-    [package]="package"
-    *ngFor="let package of packages"
-  ></app-package-card>
+  <div class="ta-center">
+    <small>
+      Unsere Pakete bieten eine perfekte Kombination für jeden Geschmack. Genießen Sie Vielfalt und
+      Qualität zum Vorteilspreis.
+    </small>
+  </div>
+  <app-package-card [package]="package" *ngFor="let package of packages"></app-package-card>
 </div>

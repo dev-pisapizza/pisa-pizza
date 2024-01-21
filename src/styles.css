@@ -1,16 +1,16 @@
 :root {
-  --green: #6ab04c;
+  --green: #009432;
   --white: #fff;
-  --red: #e74c3c;
+  --red: #ea2027;
 }
 
 body {
   margin: 0;
   padding: 0;
   color: rgb(60, 60, 60);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kalam', sans-serif;
   font-size: 15px;
-  background-color: var(--white);
+  background-color: rgb(240, 240, 240);
 }
 
 h1,
@@ -92,4 +92,8 @@ h3 {
 }
 .badge-bestseller {
   background-color: var(--red);
+}
+
+.cool-font {
+  font-family: 'Kalam', sans-serif;
 }

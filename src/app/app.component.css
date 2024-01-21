@@ -11,31 +11,30 @@
 }
 
 .header {
-  height: 130px;
-  background-image: linear-gradient(to right, #e1b00f, #f1c40f, #cda50f);
+  background-image: linear-gradient(to right, #e1b00f, #f1c40f, #d4af0f);
   box-shadow: 0 2px 5px #0000004d;
 }
 
 .header-content {
   max-width: 800px;
   margin: auto;
+  margin-top: 0;
   height: 100%;
-  padding: 0 10px;
+  padding: 20px 5px;
+  text-align: center;
 }
 
 .header-title {
-  margin: 0;
   font-size: 40px;
+  margin: 0;
   text-shadow: 1px 1px 2px rgb(60, 60, 60);
-  font-family: 'Pacifico', sans-serif;
-  font-weight: 500;
+  line-height: 1;
 }
 
 .header-subtitle {
+  font-weight: 700;
   margin: 0;
-  font-weight: 500;
   font-size: 14px;
-  font-family: 'Pacifico', sans-serif;
 }
 
 .container {
@@ -78,13 +77,8 @@
   background-color: rgb(245, 245, 245);
 }
 
-.link:hover {
-  transform: scale(105%);
-}
-
 .link.active {
   background-color: rgb(255, 255, 255);
-  transform: scale(105%);
 }
 
 .link img {
@@ -99,7 +93,7 @@ ul {
 
 .imprint {
   background-image: linear-gradient(to right, #e1b00f, #f1c40f, #cda50f);
-  padding: 20px 0 10px 0;
+  padding: 20px 0 50px 0;
 }
 
 .imprintContent {
@@ -117,10 +111,14 @@ ul {
 #scrollUp {
   display: none;
   position: fixed;
-  bottom: 20px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  background-color: white;
   border: none;
   outline: none;
   cursor: pointer;

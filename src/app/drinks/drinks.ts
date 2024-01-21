@@ -55,23 +55,23 @@ export const drinks: Drink[] = [
     price: 3,
   },
   {
-    name: 'Bier (verschiedene Sorten)',
+    name: 'Bier',
     liters: 0.5,
     price: 2.5,
   },
   {
-    name: 'Rotwein (Lambrusco)',
-    liters: 0.5,
+    name: 'Lambrusco (Rotwein)',
+    liters: 0.75,
     price: 9,
   },
   {
-    name: 'Rotwein (Chianti)',
+    name: 'Chianti (Rotwein)',
     liters: 0.7,
     price: 10,
   },
   {
     name: 'Weißwein',
-    liters: 0.5,
+    liters: 0.75,
     price: 9,
   },
 ];

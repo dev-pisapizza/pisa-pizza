@@ -5,10 +5,7 @@ import { Pipe, type PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class PricePipe implements PipeTransform {
-  transform(
-    value: number | null | undefined,
-    wrapInUnderLine?: boolean
-  ): string {
+  transform(value: number | null | undefined): string {
     if (!value) {
       return '-';
     }
@@ -17,10 +14,6 @@ export class PricePipe implements PipeTransform {
       style: 'currency',
       currency: 'EUR',
     });
-
-    if (wrapInUnderLine) {
-      result = `<u>${result}</u>`;
-    }
 
     return result;
   }
