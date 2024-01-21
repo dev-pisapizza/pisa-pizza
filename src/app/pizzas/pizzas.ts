@@ -61,7 +61,7 @@ export const pizzas: Pizza[] = [
   {
     id: 5,
     name: 'Funghi',
-    description: 'frische Champignons',
+    description: 'Frische Champignons',
     price: { small: 6.5, large: 7.5, party: 21 },
   },
   {
@@ -79,8 +79,7 @@ export const pizzas: Pizza[] = [
   {
     id: 8,
     name: 'Stagione',
-    description:
-      'Vorderschinken<sup>1,4</sup>, frische Champignons, Artischocken',
+    description: 'Vorderschinken<sup>1,4</sup>, frische Champignons, Artischocken',
     price: { small: 7.5, large: 8.5, party: 22 },
   },
   {
@@ -114,8 +113,7 @@ export const pizzas: Pizza[] = [
   {
     id: 12,
     name: 'San Remo',
-    description:
-      'frische Champignons, Oliven<sup>5</sup><sup>5</sup>, Artischocken, Sardellen',
+    description: 'Frische Champignons, Oliven<sup>5</sup><sup>5</sup>, Artischocken, Sardellen',
     price: { small: 7.5, large: 8.5, party: 22 },
   },
   {
@@ -171,7 +169,7 @@ export const pizzas: Pizza[] = [
   {
     id: 20,
     name: 'Napoli original',
-    description: 'frische Cherrytomaten, Mozarella, frischer Basilikum',
+    description: 'Frische Cherrytomaten, Mozarella, frischer Basilikum',
     price: { small: 7.5, large: 8.5, party: 22 },
   },
   {
@@ -196,8 +194,7 @@ export const pizzas: Pizza[] = [
   {
     id: 24,
     name: 'La Rossa',
-    description:
-      'Vorderschinken<sup>1,4</sup>, frische Champignons, Peperoni, Thunfisch',
+    description: 'Vorderschinken<sup>1,4</sup>, frische Champignons, Peperoni, Thunfisch',
     price: { small: 7.5, large: 8.5, party: 22 },
   },
   {
