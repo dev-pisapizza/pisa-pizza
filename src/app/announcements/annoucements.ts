@@ -7,7 +7,7 @@ export interface Announcement {
 
 export const announcements: Announcement[] = [
   {
-    description: 'Die neue Website ist da!',
+    description: 'Die neue Webseite ist da!',
     showFromDate: '24.12.2023',
     showUntilDate: '01.03.2024',
     closeable: true,
