@@ -12,6 +12,8 @@
 </header>
 
 <main class="container">
+  <app-announcements></app-announcements>
+
   <section class="about">
     <h1 class="cool-font">Frische italienische Küche direkt zu Ihnen</h1>
     <p><strong>Telefon: </strong> <a href="tel:091171516143">0911 71516143</a></p>
@@ -41,31 +43,31 @@
         <div class="mb-05">
           <img src="assets/img/pizza.webp" alt="Pizza" />
         </div>
-        Pizzas
+        <span>Pizzas</span>
       </div>
       <div class="link" [routerLink]="['/pasta']" routerLinkActive="active">
         <div class="mb-05">
           <img src="assets/img/pasta.webp" alt="Pasta" />
         </div>
-        Pasta
+        <span>Pasta</span>
       </div>
       <div class="link" [routerLink]="['/salats']" routerLinkActive="active">
         <div class="mb-05">
           <img src="assets/img/salat.webp" alt="Salate" />
         </div>
-        Salate
+        <span>Salads</span>
       </div>
       <div routerLinkActive="active" [routerLink]="['/packages']" class="link">
         <div class="mb-05">
           <img src="assets/img/package.webp" alt="Pakete" />
         </div>
-        Pakete
+        <span>Pakete</span>
       </div>
       <div routerLinkActive="active" [routerLink]="['/drinks']" class="link">
         <div class="mb-05">
           <img src="assets/img/drinks.webp" alt="Drinks" />
         </div>
-        Getränke
+        <span>Getränke</span>
       </div>
     </div>
 

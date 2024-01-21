@@ -3,7 +3,7 @@
 }
 
 .announcement {
-  background-color: white;
+  background: linear-gradient(to bottom right, rgb(255, 235, 235), rgb(220, 200, 200));
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -23,6 +23,7 @@
   border: none;
   background: transparent;
   font-size: 1.5rem;
+  color: rgb(60, 60, 60);
   line-height: 1;
   cursor: pointer;
 }

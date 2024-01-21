@@ -10,7 +10,7 @@ body {
   color: rgb(60, 60, 60);
   font-family: 'Kalam', sans-serif;
   font-size: 15px;
-  background-color: rgb(235, 235, 235);
+  background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(230, 230, 230));
 }
 
 h1,
