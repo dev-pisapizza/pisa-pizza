@@ -12,7 +12,6 @@ export const drinks: Drink[] = [
     name: 'Mineralwasser',
     liters: 0.5,
     price: 2,
-    tag: 'bestseller',
   },
   {
     name: 'Coca-Cola',
