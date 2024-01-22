@@ -29,19 +29,19 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const speisekarteElement = document.getElementById('links-grid');
-    this.windowScrolled = !this.isInView(speisekarteElement!);
+    const linksElement = document.getElementById('links-grid');
+    this.windowScrolled = this.isElementAboveCurrentView(linksElement!);
   }
 
   scrollToTop() {
-    const speisekarteElement = document.getElementById('menu');
-    if (speisekarteElement) {
-      speisekarteElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const menuElement = document.getElementById('menu');
+    if (menuElement) {
+      menuElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   }
 
-  isInView(element: HTMLElement) {
+  isElementAboveCurrentView(element: HTMLElement) {
     const rect = element.getBoundingClientRect();
-    return !(rect.bottom < 0);
+    return rect.bottom < 0;
   }
 }
