@@ -124,6 +124,8 @@ ul {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: 'Kalam', sans-serif;
+
   z-index: 99;
   color: rgb(60, 60, 60);
   box-shadow:
@@ -134,8 +136,6 @@ ul {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px;
-  width: 50px;
-  font-size: 14px;
+  padding: 5px 10px;
   border-radius: 4px;
 }

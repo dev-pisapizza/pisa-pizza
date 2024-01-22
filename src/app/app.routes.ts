@@ -5,26 +5,33 @@ import { PastaComponent } from './pasta/pasta.component';
 import { PizzasComponent } from './pizzas/pizzas.component';
 import { SaladsComponent } from './salads/salads.component';
 
+const baseTitle = 'Pisa Pizza Schwaig';
 export const routes: Routes = [
   {
     path: '',
     component: PizzasComponent,
-  },
-  {
-    path: 'packages',
-    component: PackagesComponent,
+    title: `${baseTitle}`,
   },
   {
     path: 'pizzas',
     component: PizzasComponent,
-  },
-  {
-    path: 'salats',
-    component: SaladsComponent,
+    title: `${baseTitle} / Pizzas`,
   },
   {
     path: 'pasta',
     component: PastaComponent,
+    title: `${baseTitle} / Pasta`,
   },
-  { path: 'drinks', component: DrinksComponent },
+  {
+    path: 'salads',
+    component: SaladsComponent,
+    title: `${baseTitle} / Salate`,
+  },
+
+  {
+    path: 'packages',
+    component: PackagesComponent,
+    title: `${baseTitle} / Pakete`,
+  },
+  { path: 'drinks', component: DrinksComponent, title: `${baseTitle} / Getränke` },
 ];
