@@ -17,7 +17,7 @@ export interface Pizza {
 export const pizzas: Pizza[] = [
   {
     id: 'D1',
-    name: 'Pizza Nutella®',
+    name: 'Nutella®',
     tag: 'new',
     description: 'Leckeres Nutella® Topping',
     price: {
@@ -27,7 +27,7 @@ export const pizzas: Pizza[] = [
   },
   {
     id: 'D2',
-    name: 'Pizza Nutella® Calzone',
+    name: 'Nutella® Calzone',
     description: 'Leckere Nutella® Füllung',
     price: {
       large: 8,
