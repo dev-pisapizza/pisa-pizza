@@ -29,7 +29,8 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.windowScrolled = window.scrollY > 900;
+    const speisekarteElement = document.getElementById('links-grid');
+    this.windowScrolled = !this.isInView(speisekarteElement!);
   }
 
   scrollToTop() {
@@ -37,5 +38,15 @@ export class AppComponent implements OnInit {
     if (speisekarteElement) {
       speisekarteElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
+  }
+
+  private isInView(element: HTMLElement) {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
   }
 }
