@@ -16,24 +16,25 @@
 
   <section class="about">
     <h1 class="cool-font">Frische italienische Küche direkt zu Ihnen</h1>
-    <p>
-      <strong>Telefon: </strong> <a href="tel:091171516143">0911 71516143</a> (von Dienstag bis
-      Sonntag, 17 - 21 Uhr)
+    <p class="ta-center mt-0">
+      <small>Jetzt bestellen:</small>
+      <br />
+      <a class="phone-number" href="tel:091171516143">0911 71516143</a>
+      <br />
+      <small>Dienstag bis Sonntag, 17 - 21 Uhr</small>
     </p>
+
     <p>
       <strong>Kostenlose Lieferung:</strong>
       Ab 15 € nach Schwaig, Behringersdorf, Röthenbach a.d. Pegnitz, Renzenhof, Rückersdorf,
       Laufamholz und ab 30 € bis nach Lauf a.d. Pegnitz (Stadtgebiet).
     </p>
     <p><strong>Kartenzahlung:</strong> Möglich ab einem Bestellwert von 15 € (nur bei Abholung).</p>
-    <p>
-      <strong>Geschenk:</strong> Ab einem Bestellwert von 60 € gibt es eine Flasche Wein gratis
-      dazu.
-    </p>
   </section>
 
   <section id="menu" class="menu mt-4">
-    <h2>Speisekarte</h2>
+    <h2 class="mb-0">Speisekarte</h2>
+
     <div class="links-grid">
       <div
         class="link"
@@ -42,7 +43,7 @@
         routerLinkActive="active"
       >
         <div class="mb-05">
-          <img src="assets/img/pizza.webp" alt="Pizza" />
+          <img src="assets/img/pizza-new.webp" alt="Pizza" />
         </div>
         <span>Pizzas</span>
       </div>
@@ -100,10 +101,13 @@
       <br />
       E-Mail: <a href="mailto:info@pisapizza.de">info{{ '@' }}pisapizza.de</a>
     </p>
+
+    <p>Öffnungszeiten: Dienstag bis Sonntag, 17 - 21 Uhr</p>
+
     <p>Inhaltlich Verantwortlicher gemäß § 10 Absatz 3 MDStV: H. Gök</p>
   </div>
 </section>
 
 <button id="scrollUp" [style.display]="windowScrolled ? 'block' : 'none'" (click)="scrollToTop()">
-  <small>↑ Speisekarte</small>
+  <strong>↑ Speisekarte</strong>
 </button>

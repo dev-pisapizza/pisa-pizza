@@ -2,7 +2,7 @@ export interface Announcement {
   description: string;
   showFromDate: string;
   showUntilDate: string;
-  closeable?: boolean; // Weather or not the annoucement should be closeable by the user.
+  closeable?: boolean; // Weather or not the announcement should be closeable by the user.
 }
 
 export const announcements: Announcement[] = [

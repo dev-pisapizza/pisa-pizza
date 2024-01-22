@@ -49,13 +49,13 @@ export const salads: Salad[] = [
   },
   {
     id: 60,
-    name: 'Salat Pisa',
+    name: 'Pisa Salat',
     description: 'Grüner Salat, Tomaten, Gurken, Zwiebeln, Peperoni, Oliven<sup>5</sup>, Mais, Ei',
     price: 8,
   },
   {
     id: 61,
-    name: 'Salat Tonno',
+    name: 'Tonno Salat',
     description: 'Grüner Salat, Tomaten, Zwiebeln, Thunfisch',
     price: 9,
   },

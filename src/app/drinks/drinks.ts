@@ -1,7 +1,9 @@
 type Tag = 'bestseller' | 'new';
 
 export interface Drink {
+  id: string | number;
   name: string;
+  description?: string;
   liters: number;
   price: number;
   tag?: Tag;
@@ -9,68 +11,44 @@ export interface Drink {
 
 export const drinks: Drink[] = [
   {
+    id: 62,
     name: 'Mineralwasser',
     liters: 0.5,
     price: 2,
   },
   {
-    name: 'Coca-Cola',
+    id: 63,
+    name: 'Softdrink',
+    description:
+      'Coca-Cola, Coca-Cola Zero, Coca-Cola Light, Coca-Cola Life, Fanta, Sprite, Mezzo Mix, Lift Apfelschorle',
     liters: 1.0,
     price: 3,
   },
   {
-    name: 'Coca-Cola Zero',
-    liters: 1.0,
-    price: 3,
-  },
-  {
-    name: 'Coca-Cola Light',
-    liters: 1.0,
-    price: 3,
-  },
-  {
-    name: 'Coca-Cola Life',
-    liters: 1.0,
-    price: 3,
-  },
-  {
-    name: 'Fanta',
-    liters: 1.0,
-    price: 3,
-  },
-  {
-    name: 'Sprite',
-    liters: 1.0,
-    price: 3,
-  },
-  {
-    name: 'Mezzo Mix',
-    liters: 1.0,
-    price: 3,
-  },
-  {
-    name: 'Lift Apfelschorle',
-    liters: 1.0,
-    price: 3,
-  },
-  {
+    id: 64,
     name: 'Bier',
     liters: 0.5,
     price: 2.5,
   },
   {
-    name: 'Lambrusco (Rotwein)',
-    liters: 0.75,
+    id: 65,
+    name: 'Lambrusco',
+    description: 'Rotwein',
+    liters: 0.7,
     price: 9,
   },
   {
-    name: 'Chianti (Rotwein)',
+    id: 66,
+    name: 'Chianti',
+    description: 'Rotwein',
     liters: 0.7,
     price: 10,
   },
   {
+    id: 67,
+
     name: 'Weißwein',
-    liters: 0.75,
+    liters: 0.7,
     price: 9,
   },
 ];

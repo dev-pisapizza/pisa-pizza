@@ -22,7 +22,7 @@ export const packages: Package[] = [
   },
   {
     id: 'P2',
-    description: '2 x Pizza, Salat & Getränk',
+    description: '2x Pizza, Salat & Getränk',
     price: {
       normal: 25,
       large: 27,
@@ -37,7 +37,7 @@ export const packages: Package[] = [
   },
   {
     id: 'P4',
-    description: '2 x Pasta, Salat & Getränk',
+    description: '2x Pasta, Salat & Getränk',
     price: {
       large: 27,
     },

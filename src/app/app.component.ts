@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.windowScrolled = window.scrollY > 1300;
+    this.windowScrolled = window.scrollY > 900;
   }
 
   scrollToTop() {
