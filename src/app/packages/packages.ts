@@ -18,7 +18,6 @@ export const packages: Package[] = [
       normal: 19,
       large: 20,
     },
-    tag: 'bestseller',
   },
   {
     id: 'P2',
