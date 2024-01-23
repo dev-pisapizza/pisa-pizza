@@ -44,7 +44,7 @@ export const salads: Salad[] = [
   {
     id: 59,
     name: 'Mozzarella Salat',
-    description: 'Grüner Salat, Tomaten, Mozzarella, Mozzarella Gewürz, + extra Pizzabrot',
+    description: 'Grüner Salat, Tomaten, Mozzarella, Mozzarella Gewürz und extra Pizzabrot (bei Bestellung als Teil eines Pakets ist kein Pizzabrot enthalten)',
     price: 10,
   },
   {
