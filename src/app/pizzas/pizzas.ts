@@ -42,7 +42,7 @@ export const pizzas: Pizza[] = [
     id: 2,
     name: 'Margherita',
     tag: 'bestseller',
-    description: 'Leckerer Käse und Oregano',
+    description: 'Käse und Oregano',
     price: { small: 7, large: 8, party: 22 },
   },
   {
