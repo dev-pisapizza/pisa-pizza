@@ -120,7 +120,6 @@ export const pastas: Pasta[] = [
     name: 'Rigatoni Brokkoli al Forno',
     description: 'Sahnesoße, Brokkoli, Chili, überbacken mit Käse',
     price: 10,
-    tag: 'new',
   },
   {
     id: 46,

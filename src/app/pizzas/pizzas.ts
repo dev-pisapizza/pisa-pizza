@@ -18,8 +18,7 @@ export const pizzas: Pizza[] = [
   {
     id: 'D1',
     name: 'Nutella®',
-    tag: 'new',
-    description: 'Leckeres Nutella® Topping',
+    description: 'Nutella® Topping',
     price: {
       small: 7,
       large: 8,
@@ -28,8 +27,7 @@ export const pizzas: Pizza[] = [
   {
     id: 'D2',
     name: 'Nutella® Calzone',
-    description: 'Leckere Nutella® Füllung',
-    tag: 'new',
+    description: 'Nutella® Füllung',
     price: {
       large: 8,
     },
@@ -37,7 +35,7 @@ export const pizzas: Pizza[] = [
   {
     id: 1,
     name: 'Pizzabrot',
-    description: 'Nur leckerer Pizzateig',
+    description: 'Pizzateig',
     price: { small: 5, large: 6, party: 10 },
   },
   {
@@ -92,7 +90,6 @@ export const pizzas: Pizza[] = [
     description:
       'Salami<sup>1,2,3</sup>, Vorderschinken<sup>1,4</sup>, frische Champignons, Artischocken',
     price: { small: 9, large: 10, party: 25 },
-    tag: 'new'
   },
   {
     id: 9,
@@ -147,7 +144,6 @@ export const pizzas: Pizza[] = [
     name: 'Schrimps',
     description: 'Schrimps, Knoblauch',
     price: { small: 9, large: 10.5, party: 25 },
-    tag: 'new'
   },
   {
     id: 16,

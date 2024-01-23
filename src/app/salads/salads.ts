@@ -61,6 +61,5 @@ export const salads: Salad[] = [
     name: 'Tonno Salat',
     description: 'Grüner Salat, Tomaten, Zwiebeln, Thunfisch',
     price: 9,
-    tag: 'new',
   },
 ];
