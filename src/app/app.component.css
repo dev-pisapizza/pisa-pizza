@@ -28,12 +28,13 @@
 .header-title {
   font-size: 40px;
   margin: 0;
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  text-shadow: 1px 1px 2px rgb(80, 80, 80);
   line-height: 1;
 }
 
 .header-subtitle {
   font-weight: 700;
+  color: rgb(80, 80, 80);
   margin: 0;
   font-size: 14px;
 }
