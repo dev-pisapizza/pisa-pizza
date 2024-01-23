@@ -27,6 +27,7 @@ export const packages: Package[] = [
       normal: 25,
       large: 27,
     },
+    tag: 'bestseller'
   },
   {
     id: 'P3',
@@ -48,5 +49,6 @@ export const packages: Package[] = [
     price: {
       large: 27,
     },
+    tag: 'bestseller'
   },
 ];

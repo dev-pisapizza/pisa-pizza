@@ -4,7 +4,7 @@ import { Router, RouterModule } from '@angular/router';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 
 // Disable right click.
-window.addEventListener('contextmenu',  (e)  => e.preventDefault());
+window.addEventListener('contextmenu', e => e.preventDefault());
 
 @Component({
   selector: 'app-root',

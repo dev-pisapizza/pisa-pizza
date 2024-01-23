@@ -14,7 +14,7 @@ export const salads: Salad[] = [
     name: 'Gemischter Salat',
     description: 'Grüner Salat, Tomaten, Gurken, Zwiebeln',
     price: 7,
-    tag: 'new',
+    tag: 'bestseller',
   },
   {
     id: 55,
@@ -40,11 +40,13 @@ export const salads: Salad[] = [
     description:
       'Grüner Salat, Tomaten, Gurken, Zwiebeln, Peperoni, Oliven<sup>5</sup>, Käse, Thunfisch, Vorderschinken<sup>1,4</sup>, Ei',
     price: 9,
+    tag: 'bestseller',
   },
   {
     id: 59,
     name: 'Mozzarella Salat',
-    description: 'Grüner Salat, Tomaten, Mozzarella, Mozzarella Gewürz und extra Pizzabrot (bei Bestellung als Teil eines Pakets ist kein Pizzabrot enthalten)',
+    description:
+      'Grüner Salat, Tomaten, Mozzarella, Mozzarella Gewürz und extra Pizzabrot (bei Bestellung als Teil eines Pakets ist kein Pizzabrot enthalten)',
     price: 10,
   },
   {
@@ -52,11 +54,13 @@ export const salads: Salad[] = [
     name: 'Pisa Salat',
     description: 'Grüner Salat, Tomaten, Gurken, Zwiebeln, Peperoni, Oliven<sup>5</sup>, Mais, Ei',
     price: 8,
+    tag: 'bestseller',
   },
   {
     id: 61,
     name: 'Tonno Salat',
     description: 'Grüner Salat, Tomaten, Zwiebeln, Thunfisch',
     price: 9,
+    tag: 'new',
   },
 ];

@@ -14,7 +14,6 @@ export const pastas: Pasta[] = [
     name: 'Spaghetti Napoli',
     description: 'Tomatensoße',
     price: 8,
-    tag: 'bestseller',
   },
   {
     id: 30,
@@ -27,6 +26,7 @@ export const pastas: Pasta[] = [
     name: 'Spaghetti Carbonara',
     description: 'Sahnesoße, Vorderschinken<sup>1,4</sup>, Ei',
     price: 9,
+    tag: 'bestseller',
   },
   {
     id: 32,
@@ -75,6 +75,7 @@ export const pastas: Pasta[] = [
     name: 'Rigatoni Bolgnese',
     description: 'Tomatensoße mit Rinderhackfleisch',
     price: 9,
+    tag: 'bestseller',
   },
   {
     id: 40,
@@ -87,6 +88,7 @@ export const pastas: Pasta[] = [
     name: 'Rigatoni al Forno',
     description: 'Tomatensoße mit Rinderhackfleisch, Vorderschinken, Erbsen, überbacken mit Käse',
     price: 10,
+    tag: 'bestseller',
   },
   {
     id: 42,
@@ -105,6 +107,7 @@ export const pastas: Pasta[] = [
     name: 'Rigatoni Quattro Formaggi',
     description: 'Sahnesoße, Mozzarella, Parmesan, Edamer, Gorgonzola',
     price: 9.5,
+    tag: 'bestseller',
   },
   {
     id: 45,
@@ -117,6 +120,7 @@ export const pastas: Pasta[] = [
     name: 'Rigatoni Brokkoli al Forno',
     description: 'Sahnesoße, Brokkoli, Chili, überbacken mit Käse',
     price: 10,
+    tag: 'new',
   },
   {
     id: 46,
@@ -148,6 +152,7 @@ export const pastas: Pasta[] = [
     name: 'Tortellini Panna',
     description: 'Sahnesoße, Vorderschinken<sup>1,4</sup>',
     price: 9,
+    tag: 'bestseller',
   },
   {
     id: 51,
