@@ -2,6 +2,7 @@ type Tag = 'bestseller' | 'new';
 
 export interface Package {
   id: string;
+  name: string;
   description: string;
   price: {
     normal?: number;
@@ -13,7 +14,8 @@ export interface Package {
 export const packages: Package[] = [
   {
     id: 'P1',
-    description: 'Pizza, Salat & Getränk',
+    name: 'Pizza, Salat & Getränk',
+    description: 'Eine Pizza, einen Salat und ein Getränk frei wählbar à la carte',
     price: {
       normal: 19,
       large: 20,
@@ -21,33 +23,37 @@ export const packages: Package[] = [
   },
   {
     id: 'P2',
-    description: '2x Pizza, Salat & Getränk',
+    name: '2x Pizza, Salat & Getränk',
+    description: 'Zwei Pizzas, einen Salat und ein Getränk frei wählbar à la carte',
     price: {
       normal: 25,
       large: 27,
     },
-    tag: 'bestseller'
+    tag: 'bestseller',
   },
   {
     id: 'P3',
-    description: 'Pasta, Salat & Getränk',
+    name: 'Pasta, Salat & Getränk',
+    description: 'Eine Pasta, einen Salat und ein Getränk frei wählbar à la carte',
     price: {
       large: 20,
     },
   },
   {
     id: 'P4',
-    description: '2x Pasta, Salat & Getränk',
+    name: '2x Pasta, Salat & Getränk',
+    description: 'Zwei Pastas, einen Salat und ein Getränk frei wählbar à la carte',
     price: {
       large: 27,
     },
   },
   {
     id: 'P5',
-    description: 'Pizza, Pasta, Salat & Getränk',
+    name: 'Pizza, Pasta, Salat & Getränk',
+    description: 'Eine Pizza, eine Pasta, einen Salat und ein Getränk frei wählbar à la carte',
     price: {
       large: 27,
     },
-    tag: 'bestseller'
+    tag: 'bestseller',
   },
 ];

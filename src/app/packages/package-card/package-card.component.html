@@ -6,18 +6,19 @@
   </div>
   Nr. {{ package.id }}
   <br />
-  <strong class="mr-05">{{ package.description }}</strong>
-
+  <strong>{{ package.name }}</strong>
+  <br />
+  <small>{{ package.description }}</small>
   <ul *ngIf="package.description.includes('Pizza'); else simplePrice" class="prices-container">
     <li>
       <small
-        >Klein (Ø 28 cm):
+        >Mit kleiner Pizza (Ø 28 cm):
         <span>{{ package.price.normal | appPrice }}</span>
       </small>
     </li>
     <li>
       <small
-        >Groß (Ø 32 cm):
+        >Mit großer Pizza (Ø 32 cm):
         <span>{{ package.price.large | appPrice }}</span>
       </small>
     </li>
