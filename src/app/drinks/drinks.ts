@@ -23,6 +23,7 @@ export const drinks: Drink[] = [
       'Coca-Cola, Coca-Cola Zero, Coca-Cola Light, Coca-Cola Life, Fanta, Sprite, Mezzo Mix, Lift Apfelschorle',
     liters: 1.0,
     price: 3,
+    tag: 'bestseller',
   },
   {
     id: 64,
