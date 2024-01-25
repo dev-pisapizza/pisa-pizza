@@ -28,7 +28,7 @@
 .header-title {
   font-size: 36px;
   margin: 0;
-  text-shadow: 1px 1px 2px rgb(60, 60, 60);
+  text-shadow: 1px 1px 1px rgb(60, 60, 60);
   line-height: 1;
 }
 
@@ -115,7 +115,7 @@ ul {
 }
 
 .phone-number {
-  font-size: 23px;
+  font-size: 24px;
   color: rgb(60, 60, 60);
   font-weight: 700;
 }
