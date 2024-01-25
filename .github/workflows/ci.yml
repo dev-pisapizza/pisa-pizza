@@ -24,7 +24,7 @@ jobs:
         run: |
           URL=https://test.pisa-pizza.de
           npm run build --- --base-href /
-          sed -i "s|{{URL}}|$URL|g" dist/sitemap.xml
+          sed -i "s|{{URL}}|$URL|g" dist/pisa-pizza/sitemap.xml
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
