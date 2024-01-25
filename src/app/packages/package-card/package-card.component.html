@@ -1,7 +1,7 @@
 <div class="mt-2 p-2 package">
   <div *ngIf="package.tag">
     <span *ngIf="package.tag === 'new'" class="badge badge-new">neu</span>
-    <span *ngIf="package.tag === 'bestseller'" class="badge badge-bestseller">bestseller </span>
+    <span *ngIf="package.tag === 'bestseller'" class="badge badge-bestseller">bestseller</span>
     <br />
   </div>
   Nr. {{ package.id }}
@@ -10,15 +10,15 @@
   <br />
   <small>{{ package.description }}</small>
   <ul *ngIf="package.description.includes('Pizza'); else simplePrice" class="prices-container">
-    <li>
+    <li *ngIf="package.price.normal">
       <small
-        >Mit kleiner Pizza (Ø 28 cm):
+        >{{ package.id == 'P2' ? 'Mit zwei kleinen Pizzas' : 'Mit kleiner Pizza' }} (Ø 28 cm):
         <span>{{ package.price.normal | appPrice }}</span>
       </small>
     </li>
     <li>
       <small
-        >Mit großer Pizza (Ø 32 cm):
+        >{{ package.id == 'P2' ? 'Mit zwei großen Pizzas' : 'Mit großer Pizza' }} (Ø 32 cm):
         <span>{{ package.price.large | appPrice }}</span>
       </small>
     </li>

@@ -10,17 +10,17 @@
   <br />
   <small [innerHTML]="pizza.description"></small>
   <ul class="prices-container">
-    <li>
+    <li *ngIf="pizza.price.small">
       <small
         >Klein (Ø 28 cm): <span> {{ pizza.price.small | appPrice }}</span></small
       >
     </li>
-    <li>
+    <li *ngIf="pizza.price.large">
       <small
         >Groß (Ø 32 cm): <span> {{ pizza.price.large | appPrice }}</span></small
       >
     </li>
-    <li>
+    <li *ngIf="pizza.price.party">
       <small
         >Party (60 x 40 cm): <span> {{ pizza.price.party | appPrice }}</span></small
       >

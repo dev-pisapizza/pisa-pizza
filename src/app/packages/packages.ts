@@ -5,8 +5,8 @@ export interface Package {
   name: string;
   description: string;
   price: {
-    normal?: number;
-    large?: number;
+    normal?: number; // Price for packages with two small pizzas
+    large?: number; // Price for packages with large pizza or for packages without pizza
   };
   tag?: Tag;
 }
@@ -50,7 +50,8 @@ export const packages: Package[] = [
   {
     id: 'P5',
     name: 'Pizza, Pasta, Salat & Softdrink',
-    description: 'Eine Pizza, eine Pasta, einen Salat und einen Softdrink frei wählbar à la carte',
+    description:
+      'Eine große Pizza, eine Pasta, einen Salat und einen Softdrink frei wählbar à la carte',
     price: {
       large: 27,
     },
