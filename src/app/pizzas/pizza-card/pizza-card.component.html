@@ -8,7 +8,7 @@
   <br />
   <strong>{{ pizza.name }}</strong>
   <br />
-  <small class="card-description" [innerHTML]="pizza.description"></small>
+  <span [innerHTML]="pizza.description"></span>
   <ul class="prices-container">
     <li *ngIf="pizza.price.small">
       Klein (Ø 28 cm): <span> {{ pizza.price.small | appPrice }}</span>

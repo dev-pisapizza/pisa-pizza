@@ -8,6 +8,7 @@
   <br />
   <strong>{{ pasta.name }}</strong>
   <br />
-  <small class="card-description" [innerHTML]="pasta.description"></small>
-  <small> {{ pasta.price | appPrice }}</small>
+  <span [innerHTML]="pasta.description"></span>
+  <br />
+  <span> {{ pasta.price | appPrice }}</span>
 </div>

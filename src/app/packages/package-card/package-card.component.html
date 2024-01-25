@@ -8,22 +8,19 @@
   <br />
   <strong>{{ package.name }}</strong>
   <br />
-  <small class="card-description">{{ package.description }}</small>
+  <span>{{ package.description }}</span>
+  <br />
   <ul *ngIf="package.description.includes('Pizza'); else simplePrice" class="prices-container">
     <li *ngIf="package.price.normal">
-      <small
-        >{{ package.id == 'P2' ? 'Mit zwei kleinen Pizzas' : 'Mit kleiner Pizza' }} (Ø 28 cm):
-        <span>{{ package.price.normal | appPrice }}</span>
-      </small>
+      {{ package.id == 'P2' ? 'Mit zwei kleinen Pizzas' : 'Mit kleiner Pizza' }} (Ø 28 cm):
+      <span>{{ package.price.normal | appPrice }}</span>
     </li>
     <li>
-      <small
-        >{{ package.id == 'P2' ? 'Mit zwei großen Pizzas' : 'Mit großer Pizza' }} (Ø 32 cm):
-        <span>{{ package.price.large | appPrice }}</span>
-      </small>
+      {{ package.id == 'P2' ? 'Mit zwei großen Pizzas' : 'Mit großer Pizza' }} (Ø 32 cm):
+      <span>{{ package.price.large | appPrice }}</span>
     </li>
   </ul>
   <ng-template #simplePrice>
-    <small>{{ package.price.large || package.price.normal | appPrice }}</small>
+    {{ package.price.large || package.price.normal | appPrice }}
   </ng-template>
 </div>

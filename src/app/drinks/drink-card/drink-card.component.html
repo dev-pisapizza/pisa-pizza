@@ -7,14 +7,12 @@
   Nr. {{ drink.id }}
   <br />
   <strong>{{ drink.name }}</strong>
-
   <ng-container *ngIf="drink.description">
     <br />
-    <small class="card-description">{{ drink.description }}</small>
+    {{ drink.description }}
   </ng-container>
-  <small>{{ drink.liters | appGermanNumber }}L</small>
   <br />
-  <small>
-    <span>{{ drink.price | appPrice }}</span>
-  </small>
+  {{ drink.liters | appGermanNumber }}L
+  <br />
+  <span>{{ drink.price | appPrice }}</span>
 </div>
