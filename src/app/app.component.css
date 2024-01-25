@@ -133,8 +133,7 @@ ul {
   bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Kalam', sans-serif;
-
+  font-size: 14px;
   z-index: 99;
   color: rgb(60, 60, 60);
   box-shadow:
