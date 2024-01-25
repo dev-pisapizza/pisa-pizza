@@ -15,7 +15,7 @@ export const packages: Package[] = [
   {
     id: 'P1',
     name: 'Pizza, Salat & Softdrink',
-    description: 'Eine Pizza, einen Salat und einen Softdrink frei wählbar à la carte',
+    description: 'Eine Pizza, einen Salat und einen Softdrink frei wählbar',
     price: {
       normal: 19,
       large: 20,
@@ -24,7 +24,7 @@ export const packages: Package[] = [
   {
     id: 'P2',
     name: '2x Pizza, Salat & Softdrink',
-    description: 'Zwei Pizzas, einen Salat und einen Softdrink frei wählbar à la carte',
+    description: 'Zwei Pizzas, einen Salat und einen Softdrink frei wählbar',
     price: {
       normal: 25,
       large: 27,
@@ -34,7 +34,7 @@ export const packages: Package[] = [
   {
     id: 'P3',
     name: 'Pasta, Salat & Softdrink',
-    description: 'Eine Pasta, einen Salat und einen Softdrink frei wählbar à la carte',
+    description: 'Eine Pasta, einen Salat und einen Softdrink frei wählbar',
     price: {
       large: 20,
     },
@@ -42,7 +42,7 @@ export const packages: Package[] = [
   {
     id: 'P4',
     name: '2x Pasta, Salat & Softdrink',
-    description: 'Zwei Pastas, einen Salat und einen Softdrink frei wählbar à la carte',
+    description: 'Zwei Pastas, einen Salat und einen Softdrink frei wählbar',
     price: {
       large: 27,
     },
@@ -50,8 +50,7 @@ export const packages: Package[] = [
   {
     id: 'P5',
     name: 'Pizza, Pasta, Salat & Softdrink',
-    description:
-      'Eine große Pizza, eine Pasta, einen Salat und einen Softdrink frei wählbar à la carte',
+    description: 'Eine große Pizza, eine Pasta, einen Salat und einen Softdrink frei wählbar',
     price: {
       large: 27,
     },
