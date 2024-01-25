@@ -34,4 +34,5 @@ export const routes: Routes = [
     title: `${baseTitle} / Pakete`,
   },
   { path: 'drinks', component: DrinksComponent, title: `${baseTitle} / Getränke` },
+  { path: '**', redirectTo: 'pizzas' },
 ];
