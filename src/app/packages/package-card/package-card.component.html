@@ -8,7 +8,7 @@
   <br />
   <strong>{{ package.name }}</strong>
   <br />
-  <small>{{ package.description }}</small>
+  <small class="card-description">{{ package.description }}</small>
   <ul *ngIf="package.description.includes('Pizza'); else simplePrice" class="prices-container">
     <li *ngIf="package.price.normal">
       <small
@@ -24,7 +24,6 @@
     </li>
   </ul>
   <ng-template #simplePrice>
-    <br />
     <small>{{ package.price.large || package.price.normal | appPrice }}</small>
   </ng-template>
 </div>
