@@ -1,8 +1,10 @@
 <div class="mt-2">
   <h3 class="mb-0 ta-center">Pizzas</h3>
   <div class="ta-center">
-    Selbstgemachter Pizzateig mit Tomatensoße und Käse<sup>1,3</sup>. Wählen Sie Beläge à la carte
-    oder individuell (pro zusätzlicher Zutat zwischen 0,5 € - 4 €).
+    <small>
+      Selbstgemachter Pizzateig mit Tomatensoße und Käse<sup>1,3</sup>. Wählen Sie Beläge à la carte
+      oder individuell (pro zusätzlicher Zutat zwischen 0,5 € - 4 €).
+    </small>
   </div>
   <app-pizza-card [pizza]="pizza" *ngFor="let pizza of pizzas"></app-pizza-card>
 </div>
