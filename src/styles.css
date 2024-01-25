@@ -9,8 +9,12 @@ body {
   padding: 0;
   color: rgb(60, 60, 60);
   font-family: 'Kalam', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(230, 230, 230));
+}
+
+small {
+  font-size: 12px;
 }
 
 h1,
@@ -109,4 +113,8 @@ h3 {
 
 .tiny {
   font-size: 12px;
+}
+
+.fs-16 {
+  font-size: 16px;
 }
