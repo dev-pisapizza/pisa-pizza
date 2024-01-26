@@ -8,7 +8,7 @@ import { Subject } from 'rxjs';
 export class SwipeService {
   private xDown: number | null = null;
   private yDown: number | null = null;
-  private swipeThreshold = 10;
+  private swipeThreshold = 5;
 
   private swipeLeftSubject = new Subject<void>();
   private swipeRightSubject = new Subject<void>();
