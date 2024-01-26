@@ -22,7 +22,7 @@
       <small>Dienstag bis Sonntag, 17 - 21 Uhr</small>
     </p>
 
-    <p class="ta-center">
+    <p id="scrolltohere" class="ta-center">
       Ab einem Bestellwert von 15 € liefern wir nach: Schwaig, Behringersdorf, Röthenbach a.d.
       Pegnitz, Renzenhof, Rückersdorf, Laufamholz und ab 30 € bis nach Lauf a.d. Pegnitz
       (Stadtgebiet).
@@ -116,7 +116,7 @@
 <button
   id="scrollUp"
   [style.display]="windowScrolled ? 'block' : 'none'"
-  (click)="scrollToTop('menu', 'smooth')"
+  (click)="scrollToTop('scrolltohere', 'smooth')"
 >
   <strong>↑ Speisekarte</strong>
 </button>

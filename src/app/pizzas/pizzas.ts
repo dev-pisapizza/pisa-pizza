@@ -16,23 +16,6 @@ export interface Pizza {
 
 export const pizzas: Pizza[] = [
   {
-    id: 'D1',
-    name: 'Nutella®',
-    description: 'Nutella® Topping',
-    price: {
-      small: 7,
-      large: 8,
-    },
-  },
-  {
-    id: 'D2',
-    name: 'Nutella® Calzone',
-    description: 'Nutella® Füllung',
-    price: {
-      large: 8,
-    },
-  },
-  {
     id: 1,
     name: 'Pizzabrot',
     description: 'Pizzateig und Oregano',
@@ -41,7 +24,6 @@ export const pizzas: Pizza[] = [
   {
     id: 2,
     name: 'Margherita',
-    tag: 'bestseller',
     description: 'Käse und Oregano',
     price: { small: 7, large: 8, party: 22 },
   },
@@ -94,6 +76,7 @@ export const pizzas: Pizza[] = [
   {
     id: 9,
     name: 'Mix',
+    tag: 'bestseller',
     description:
       'Vorderschinken<sup>1,4</sup>, Salami<sup>1,2,3</sup>, frische Champignons, Paprika, Peperoni, Zwiebeln, Oliven<sup>5</sup>',
     price: { small: 9, large: 10.5, party: 25 },
@@ -107,7 +90,6 @@ export const pizzas: Pizza[] = [
   },
   {
     id: 11,
-    tag: 'bestseller',
     name: 'Pescara',
     description:
       'Vorderschinken<sup>1,4</sup>, Salami<sup>1,2,3</sup>, Peperoni, frische Champignons',
@@ -154,6 +136,7 @@ export const pizzas: Pizza[] = [
   {
     id: 17,
     name: 'Tonno',
+    tag: 'bestseller',
     description: 'Thunfisch, Zwiebeln',
     price: { small: 8.5, large: 9.5, party: 24 },
   },
@@ -223,5 +206,22 @@ export const pizzas: Pizza[] = [
     name: 'Rucola Parma',
     description: 'Parmaschinken, Rucola, Parmesan',
     price: { small: 9, large: 10, party: 25 },
+  },
+  {
+    id: 'D1',
+    name: 'Nutella®',
+    description: 'Nutella® Topping',
+    price: {
+      small: 7,
+      large: 8,
+    },
+  },
+  {
+    id: 'D2',
+    name: 'Nutella® Calzone',
+    description: 'Nutella® Füllung',
+    price: {
+      large: 8,
+    },
   },
 ];
