@@ -172,7 +172,7 @@ export const pizzas: Pizza[] = [
   {
     id: 20,
     name: 'Napoli original',
-    description: 'Frische Cherrytomaten, Mozarella, frischer Basilikum',
+    description: 'Frische Cherrytomaten, Mozzarella, frischer Basilikum',
     price: { small: 8.5, large: 9.5, party: 25 },
   },
   {

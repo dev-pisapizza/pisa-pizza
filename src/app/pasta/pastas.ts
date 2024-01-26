@@ -17,7 +17,7 @@ export const pastas: Pasta[] = [
   },
   {
     id: 30,
-    name: 'Spaghetti Bolgnese',
+    name: 'Spaghetti Bolognese',
     description: 'Tomatensoße mit Rinderhackfleisch',
     price: 9,
   },
