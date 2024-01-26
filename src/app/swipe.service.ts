@@ -8,6 +8,7 @@ import { Subject } from 'rxjs';
 export class SwipeService {
   private xDown: number | null = null;
   private yDown: number | null = null;
+  private swipeThreshold = 10;
 
   private swipeLeftSubject = new Subject<void>();
   private swipeRightSubject = new Subject<void>();
@@ -52,12 +53,13 @@ export class SwipeService {
     const xDiff = this.xDown - xUp;
     const yDiff = this.yDown - yUp;
 
-    if (Math.abs(xDiff) > Math.abs(yDiff)) {
+    // Check if the swipe is long enough
+    if (Math.abs(xDiff) > Math.abs(yDiff) && Math.abs(xDiff) > this.swipeThreshold) {
       if (xDiff > 0) {
-        // Right swipe.
+        // Right swipe
         this.swipeRightSubject.next();
       } else {
-        // Left swipe.
+        // Left swipe
         this.swipeLeftSubject.next();
       }
     }

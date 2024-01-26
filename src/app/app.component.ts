@@ -65,7 +65,6 @@ export class AppComponent implements OnInit {
   private getNextRoute(): string {
     const currentRouteIndex = this.getCurrentRouteIndex();
 
-    console.log((currentRouteIndex + 1) % routes.length);
     return routes[(currentRouteIndex + 1) % routes.length];
   }
 
