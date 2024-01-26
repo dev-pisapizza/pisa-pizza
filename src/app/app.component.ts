@@ -53,23 +53,20 @@ export class AppComponent implements OnInit {
   }
 
   private getPrevRoute(): string {
-    const currentRouteIndex = this.getCurrentRouteIndex();
+    let currentRouteIndex = this.getCurrentRouteIndex();
 
-    if (currentRouteIndex > 0) {
-      return routes[currentRouteIndex - 1];
+    if (currentRouteIndex === 0) {
+      currentRouteIndex = routes.length;
     }
 
-    return '';
+    return routes[(currentRouteIndex - 1) % routes.length];
   }
 
   private getNextRoute(): string {
     const currentRouteIndex = this.getCurrentRouteIndex();
 
-    if (currentRouteIndex + 1 < routes.length) {
-      return routes[currentRouteIndex + 1];
-    }
-
-    return '';
+    console.log((currentRouteIndex + 1) % routes.length);
+    return routes[(currentRouteIndex + 1) % routes.length];
   }
 
   private getCurrentRouteIndex() {
