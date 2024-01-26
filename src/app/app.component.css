@@ -26,7 +26,7 @@
 }
 
 .header-title {
-  font-size: 36px;
+  font-size: 38px;
   margin: 0;
   text-shadow: 1px 1px 1px rgb(60, 60, 60);
   line-height: 1;
@@ -118,7 +118,8 @@ ul {
   font-size: 24px;
   color: rgb(60, 60, 60);
   font-weight: 700;
-  animation: heartbeat 700ms ease;
+  animation: heartbeat 800ms ease;
+  animation-delay: 700ms;
   display: inline-block; /* This is important for span */
 }
 
