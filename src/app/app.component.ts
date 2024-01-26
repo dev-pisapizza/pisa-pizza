@@ -39,6 +39,7 @@ export class AppComponent implements OnInit {
 
     if (nextRoute) {
       this.router.navigateByUrl(`/${nextRoute}`);
+      this.scrollToTop('outlet-start', 'instant');
     }
   }
 
@@ -47,6 +48,7 @@ export class AppComponent implements OnInit {
 
     if (prevRoute) {
       this.router.navigateByUrl(`/${prevRoute}`);
+      this.scrollToTop('outlet-start', 'instant');
     }
   }
 
@@ -88,10 +90,10 @@ export class AppComponent implements OnInit {
     this.windowScrolled = this.isElementAboveCurrentView(linksElement!);
   }
 
-  scrollToTop() {
-    const menuElement = document.getElementById('menu');
+  scrollToTop(elementId: string, scrollBehavior: 'smooth' | 'instant') {
+    const menuElement = document.getElementById(elementId);
     if (menuElement) {
-      menuElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      menuElement.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
     }
   }
 

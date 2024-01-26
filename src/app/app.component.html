@@ -73,6 +73,7 @@
       </div>
     </div>
 
+    <div id="outlet-start"></div>
     <router-outlet></router-outlet>
 
     <p class="ta-center tiny">
@@ -112,6 +113,10 @@
   </div>
 </section>
 
-<button id="scrollUp" [style.display]="windowScrolled ? 'block' : 'none'" (click)="scrollToTop()">
+<button
+  id="scrollUp"
+  [style.display]="windowScrolled ? 'block' : 'none'"
+  (click)="scrollToTop('menu', 'smooth')"
+>
   <strong>↑ Speisekarte</strong>
 </button>
