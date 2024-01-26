@@ -135,3 +135,14 @@ h3 {
 a {
   text-underline-offset: 4px;
 }
+
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  25%, 75% { transform: scale(1.1); }
+  50% { transform: scale(1); }
+}
+
+.heartbeat {
+  animation: heartbeat 1000ms ease-in-out;
+}
