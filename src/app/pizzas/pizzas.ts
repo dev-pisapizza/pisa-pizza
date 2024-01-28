@@ -98,7 +98,7 @@ export const pizzas: Pizza[] = [
   {
     id: 12,
     name: 'San Remo',
-    description: 'Frische Champignons, Oliven<sup>5</sup><sup>5</sup>, Artischocken, Sardellen',
+    description: 'Frische Champignons, Oliven<sup>5</sup>, Artischocken, Sardellen',
     price: { small: 8.5, large: 9.5, party: 24 },
   },
   {

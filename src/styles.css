@@ -136,11 +136,19 @@ a {
   text-underline-offset: 4px;
 }
 
-
 @keyframes heartbeat {
-  0%, 100% { transform: scale(1); }
-  25%, 75% { transform: scale(1.1); }
-  50% { transform: scale(1); }
+  0%,
+  10%,
+  20%,
+  30%,
+  40%,
+  100% {
+    transform: scale(1);
+  }
+  5%,
+  25% {
+    transform: scale(1.05);
+  }
 }
 
 .heartbeat {
