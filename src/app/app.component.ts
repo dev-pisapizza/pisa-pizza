@@ -82,7 +82,7 @@ export class AppComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const linksElement = document.getElementById('links-grid');
+    const linksElement = document.getElementById('phone-number-top');
     this.windowScrolled = this.isElementAboveCurrentView(linksElement!);
   }
 

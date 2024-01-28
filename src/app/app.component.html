@@ -13,11 +13,11 @@
   <app-announcements></app-announcements>
 
   <section class="about">
-    <h1 class="cool-font ta-center">Italienische Küche direkt zu Ihnen</h1>
+    <h1 class="cool-font ta-center">Frische italienische Küche direkt zu Ihnen</h1>
     <p class="ta-center mt-0">
       <small>Jetzt bestellen:</small>
       <br />
-      <a class="phone-number" href="tel:091171516143">0911 71516143</a>
+      <a id="phone-number-top" class="phone-number" href="tel:091171516143">0911 71516143</a>
       <br />
       <small>Dienstag bis Sonntag, 17 - 21 Uhr</small>
     </p>
@@ -113,8 +113,8 @@
   </div>
 </section>
 
-<button id="scrollUp" [style.display]="windowScrolled ? 'block' : 'none'">
-  <a href="tel:091171516143">
+<a id="phone" href="tel:091171516143">
+  <button [style.display]="windowScrolled ? 'block' : 'none'">
     <img src="assets/img/phone.webp" alt="Phone" />
-  </a>
-</button>
+  </button>
+</a>

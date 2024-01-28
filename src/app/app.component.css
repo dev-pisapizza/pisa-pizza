@@ -127,11 +127,11 @@ ul {
   margin: 0 0 0 0;
 }
 
-#scrollUp {
+#phone button {
   display: none;
   position: fixed;
   bottom: 30px;
-  right: 30px;
+  right: 20px;
   font-size: 14px;
   z-index: 99;
   color: rgb(60, 60, 60);
@@ -147,7 +147,7 @@ ul {
   border-radius: 50%;
 }
 
-#scrollUp img {
+#phone img {
   width: 30px;
   animation: heartbeat 700ms ease-in-out;
   animation-delay: 500ms;
