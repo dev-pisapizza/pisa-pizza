@@ -127,7 +127,7 @@ ul {
   margin: 0 0 0 0;
 }
 
-#phone button {
+#phone {
   display: none;
   position: fixed;
   bottom: 30px;

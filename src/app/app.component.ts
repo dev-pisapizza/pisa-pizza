@@ -97,4 +97,20 @@ export class AppComponent implements OnInit {
     const rect = element.getBoundingClientRect();
     return rect.bottom < 0;
   }
+
+  call(phoneNumber: string): void {
+    // Erstellt das <a> Element mit dem Telefonlink
+    const telLink = document.createElement('a');
+    telLink.href = `tel:${phoneNumber}`;
+    telLink.style.display = 'none'; // Versteckt das Element
+
+    // Fügt das Element zum DOM hinzu
+    document.body.appendChild(telLink);
+
+    // Klickt auf das <a> Element
+    telLink.click();
+
+    // Entfernt das Element nach dem Klick
+    document.body.removeChild(telLink);
+  }
 }
