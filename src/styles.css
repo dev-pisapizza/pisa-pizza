@@ -138,16 +138,15 @@ a {
 
 @keyframes heartbeat {
   0%,
-  10%,
-  20%,
-  30%,
-  40%,
   100% {
     transform: scale(1);
   }
-  5%,
-  25% {
-    transform: scale(1.05);
+  25%,
+  75% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
   }
 }
 

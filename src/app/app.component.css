@@ -118,7 +118,7 @@ ul {
   font-size: 24px;
   color: rgb(60, 60, 60);
   font-weight: 700;
-  animation: heartbeat 4s ease-in-out infinite;
+  animation: heartbeat 700ms ease-in-out;
   animation-delay: 1s;
   display: inline-block; /* This is important for span */
 }
