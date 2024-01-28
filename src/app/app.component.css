@@ -131,8 +131,7 @@ ul {
   display: none;
   position: fixed;
   bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 30px;
   font-size: 14px;
   z-index: 99;
   color: rgb(60, 60, 60);
@@ -144,6 +143,12 @@ ul {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px 20px 8px 20px;
-  border-radius: 4px;
+  padding: 15px 13px 12px 15px;
+  border-radius: 50%;
+}
+
+#scrollUp img {
+  width: 30px;
+  animation: heartbeat 700ms ease-in-out;
+  animation-delay: 500ms;
 }

@@ -149,7 +149,3 @@ a {
     transform: scale(1);
   }
 }
-
-.heartbeat {
-  animation: heartbeat 800ms ease-in-out;
-}
