@@ -112,7 +112,7 @@ export const pizzas: Pizza[] = [
     id: 14,
     name: 'Vegetaria',
     description:
-      'Frische Champignons, Oliven<sup>5</sup><sup>5</sup>, Paprika, Artischocken, Peperoni, Zwiebeln',
+      'Frische Champignons, Oliven<sup>5</sup>, Paprika, Artischocken, Peperoni, Zwiebeln',
     price: { small: 8.5, large: 10, party: 25 },
   },
   {
@@ -174,7 +174,7 @@ export const pizzas: Pizza[] = [
     id: 23,
     name: 'Pisa',
     description:
-      'Vorderschinken<sup>1,4</sup>, frische Champignons, Oliven<sup>5</sup><sup>5</sup>, Artischocken, Peperoni',
+      'Vorderschinken<sup>1,4</sup>, frische Champignons, Oliven<sup>5</sup>, Artischocken, Peperoni',
     price: { small: 8.5, large: 9.5, party: 25 },
   },
   {
