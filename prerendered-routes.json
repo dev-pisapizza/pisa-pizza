@@ -1,0 +1,9 @@
+{
+  "routes": [
+    "/drinks",
+    "/packages",
+    "/pasta",
+    "/pizzas",
+    "/salads"
+  ]
+}
