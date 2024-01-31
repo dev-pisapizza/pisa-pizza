@@ -106,7 +106,20 @@ export class AppComponent implements OnInit {
     }
   }
 
-  isElementAboveCurrentView(element: HTMLElement) {
+  private isElementVisible(elementId: string) {
+    const element = document.getElementById(elementId);
+    if (!element) return false;
+
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+  }
+
+  private isElementAboveCurrentView(element: HTMLElement) {
     const rect = element.getBoundingClientRect();
     return rect.bottom < 0;
   }
@@ -128,7 +141,9 @@ export class AppComponent implements OnInit {
   }
 
   scrollAndNavigate(route: string): void {
-    this.scrollToElement('menu', 'smooth', 50);
+    if (!this.isElementVisible('outlet-start')) {
+      this.scrollToElement('menu', 'smooth', 20);
+    }
 
     this.router.navigateByUrl(route);
   }
