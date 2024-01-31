@@ -1,8 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Router, RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { SwipeService } from './swipe.service';
+import { filter } from 'rxjs';
 
 // Disable right click.
 window.addEventListener('contextmenu', e => e.preventDefault());
@@ -18,10 +19,17 @@ const routes = ['pizzas', 'pasta', 'salads', 'packages', 'drinks'];
 })
 export class AppComponent implements OnInit {
   windowScrolled = false;
+  currentUrl = '';
+
   constructor(
     private readonly router: Router,
     private readonly swipeService: SwipeService,
-  ) {}
+  ) {
+    router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
+      // Update your active link logic
+      this.currentUrl = event.urlAfterRedirects;
+    });
+  }
 
   ngOnInit(): void {
     const route = new URLSearchParams(window.location.search).get('route');
@@ -75,9 +83,8 @@ export class AppComponent implements OnInit {
     return currentRouteIndex;
   }
 
-  isActive(): boolean {
-    const url = this.router.url;
-    return url === '/pizzas' || url === '/';
+  isActive(...routes: string[]): boolean {
+    return routes.includes(this.currentUrl);
   }
 
   @HostListener('window:scroll', [])
@@ -87,9 +94,9 @@ export class AppComponent implements OnInit {
   }
 
   scrollToTop(elementId: string, scrollBehavior: 'smooth' | 'instant') {
-    const menuElement = document.getElementById(elementId);
-    if (menuElement) {
-      menuElement.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
     }
   }
 
@@ -112,5 +119,11 @@ export class AppComponent implements OnInit {
 
     // Entfernt das Element nach dem Klick
     document.body.removeChild(telLink);
+  }
+
+  scrollAndNavigate(route: string): void {
+    this.scrollToTop('menu', 'smooth');
+
+    this.router.navigateByUrl(route);
   }
 }

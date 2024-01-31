@@ -38,34 +38,37 @@
     <div id="links-grid" class="links-grid">
       <div
         class="link"
-        [class.active]="isActive()"
-        [routerLink]="['/pizzas']"
-        routerLinkActive="active"
+        [class.active]="isActive('/pizzas', '')"
+        (click)="scrollAndNavigate('/pizzas')"
       >
         <div class="mb-05">
           <img src="assets/img/pizza.webp" alt="Pizzas" />
         </div>
         <span>Pizzas</span>
       </div>
-      <div class="link" [routerLink]="['/pasta']" routerLinkActive="active">
+      <div class="link" (click)="scrollAndNavigate('/pasta')" [class.active]="isActive('/pasta')">
         <div class="mb-05">
           <img src="assets/img/pasta.webp" alt="Pasta" />
         </div>
         <span>Pasta</span>
       </div>
-      <div class="link" [routerLink]="['/salads']" routerLinkActive="active">
+      <div class="link" (click)="scrollAndNavigate('/salads')" [class.active]="isActive('/salads')">
         <div class="mb-05">
           <img src="assets/img/salad.webp" alt="Salate" />
         </div>
         <span>Salate</span>
       </div>
-      <div routerLinkActive="active" [routerLink]="['/packages']" class="link">
+      <div
+        [class.active]="isActive('/packages')"
+        (click)="scrollAndNavigate('/packages')"
+        class="link"
+      >
         <div class="mb-05">
           <img src="assets/img/package.webp" alt="Pakete" />
         </div>
         <span>Pakete</span>
       </div>
-      <div routerLinkActive="active" [routerLink]="['/drinks']" class="link">
+      <div [class.active]="isActive('/drinks')" (click)="scrollAndNavigate('/drinks')" class="link">
         <div class="mb-05">
           <img src="assets/img/drinks.webp" alt="Getränke" />
         </div>
