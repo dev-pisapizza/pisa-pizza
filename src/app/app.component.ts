@@ -141,9 +141,7 @@ export class AppComponent implements OnInit {
   }
 
   scrollAndNavigate(route: string): void {
-    if (!this.isElementVisible('outlet-start')) {
-      this.scrollToElement('menu', 'smooth', 20);
-    }
+    this.scrollToElement('menu', 'smooth', 20);
 
     this.router.navigateByUrl(route);
   }
