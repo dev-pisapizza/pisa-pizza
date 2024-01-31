@@ -6,9 +6,10 @@
   </div>
   Nr. {{ pasta.id }}
   <br />
-  <strong class="fs-16">{{ pasta.name }}</strong>
+  <strong class="fs-18">{{ pasta.name }}</strong>
   <br />
   <span [innerHTML]="pasta.description"></span>
-  <br />
-  <span> {{ pasta.price | appPrice }}</span>
+  <div class="mt-1">
+    <span> {{ pasta.price | appPrice }}</span>
+  </div>
 </div>

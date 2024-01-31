@@ -6,7 +6,7 @@
   </div>
   Nr. {{ package.id }}
   <br />
-  <strong class="fs-16">{{ package.name }}</strong>
+  <strong class="fs-18">{{ package.name }}</strong>
   <br />
   <span>{{ package.description }}</span>
   <br />
@@ -21,6 +21,8 @@
     </li>
   </ul>
   <ng-template #simplePrice>
-    {{ package.price.large || package.price.normal | appPrice }}
+    <div class="mt-1">
+      <span> {{ package.price.normal || package.price.large | appPrice }}</span>
+    </div>
   </ng-template>
 </div>

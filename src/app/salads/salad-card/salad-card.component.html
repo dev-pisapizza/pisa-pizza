@@ -6,9 +6,10 @@
   </div>
   Nr. {{ salad.id }}
   <br />
-  <strong class="fs-16">{{ salad.name }}</strong>
+  <strong class="fs-18">{{ salad.name }}</strong>
   <br />
   <span [innerHTML]="salad.description"></span>
-  <br />
-  {{ salad.price | appPrice }}
+  <div class="mt-1">
+    <span> {{ salad.price | appPrice }}</span>
+  </div>
 </div>
