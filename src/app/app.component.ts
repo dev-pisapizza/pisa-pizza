@@ -1,5 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { SwipeService } from './swipe.service';
@@ -13,7 +13,7 @@ const routes = ['pizzas', 'pasta', 'salads', 'packages', 'drinks'];
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, AnnouncementsComponent, RouterModule],
+  imports: [NgIf, AnnouncementsComponent, RouterModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
