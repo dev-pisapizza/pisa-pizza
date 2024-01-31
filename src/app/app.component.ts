@@ -47,7 +47,7 @@ export class AppComponent implements OnInit {
 
     if (nextRoute) {
       this.router.navigateByUrl(`/${nextRoute}`);
-      this.scrollToTop('outlet-start', 'instant');
+      this.scrollToElement('outlet-start', 'auto');
     }
   }
 
@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
 
     if (prevRoute) {
       this.router.navigateByUrl(`/${prevRoute}`);
-      this.scrollToTop('outlet-start', 'instant');
+      this.scrollToElement('outlet-start', 'auto');
     }
   }
 
@@ -93,10 +93,16 @@ export class AppComponent implements OnInit {
     this.windowScrolled = this.isElementAboveCurrentView(linksElement!);
   }
 
-  scrollToTop(elementId: string, scrollBehavior: 'smooth' | 'instant') {
+  scrollToElement(elementId: string, scrollBehavior: 'smooth' | 'auto', offset: number = 0) {
     const element = document.getElementById(elementId);
     if (element) {
-      element.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
+      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: scrollBehavior,
+      });
     }
   }
 
@@ -122,7 +128,7 @@ export class AppComponent implements OnInit {
   }
 
   scrollAndNavigate(route: string): void {
-    this.scrollToTop('menu', 'smooth');
+    this.scrollToElement('menu', 'smooth', 50);
 
     this.router.navigateByUrl(route);
   }
