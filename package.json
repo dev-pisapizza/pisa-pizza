@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
+    "deploy-production": "node deploy-production.js",
     "test": "ng test",
     "format": "prettier src --write"
   },
