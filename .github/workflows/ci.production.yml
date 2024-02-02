@@ -33,7 +33,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
           folder: dist/pisa-pizza
-          clean: 'true'
+          clean: 'false'
 
       - name: Deploy 404.html
         uses: JamesIves/github-pages-deploy-action@v4
