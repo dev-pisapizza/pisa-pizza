@@ -1,9 +1,9 @@
-name: CI Main
+name: CI Develop
 
 on:
   push:
     branches:
-      - main
+      - develop
 
 permissions:
   contents: write
@@ -22,14 +22,16 @@ jobs:
 
       - name: Build
         run: |
-          URL=https://test.pisa-pizza.de
-          npm run build --- --base-href /
-          sed -i "s|{{URL}}|$URL|g" dist/pisa-pizza/sitemap.xml
+          URL=https://dev-pisapizza.github.io/pisa-pizza/develop
+          npm run build --- --base-href $URL/
+          sed -i "s|{{URL}}|$URL/|g" src/404.html
+          rm src/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
           folder: dist/pisa-pizza
+          branch: gh-pages
+          target-folder: develop
           clean: 'true'

@@ -1,0 +1,35 @@
+name: CI Production
+
+on:
+  push:
+    branches:
+      - pisa-pizza/production
+
+permissions:
+  contents: write
+
+jobs:
+  ubuntu-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build
+        run: |
+          URL=https://test.pisa-pizza.de
+          npm run build --- --base-href /
+          sed -i "s|{{URL}}|$URL|g" dist/pisa-pizza/sitemap.xml
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: gh-pages
+          folder: dist/pisa-pizza
+          clean: 'true'
