@@ -24,14 +24,20 @@ jobs:
         run: |
           URL=https://dev-pisapizza.github.io/pisa-pizza/develop
           npm run build --- --base-href $URL/
-          sed -i "s|{{URL}}|$URL/|g" dist/pisa-pizza/404.html
-          rm dist/pisa-pizza/CNAME
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy Build
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           folder: dist/pisa-pizza
           branch: gh-pages
           target-folder: develop
+          clean: 'true'
+
+      - name: Deploy 404.html
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: ~src/404.html
+          branch: gh-pages
           clean: 'true'
