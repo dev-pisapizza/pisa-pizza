@@ -24,8 +24,8 @@ jobs:
         run: |
           URL=https://dev-pisapizza.github.io/pisa-pizza/develop
           npm run build --- --base-href $URL/
-          sed -i "s|{{URL}}|$URL/|g" src/404.html
-          rm src/CNAME
+          sed -i "s|{{URL}}|$URL/|g" dist/pisa-pizza/404.html
+          rm dist/pisa-pizza/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
