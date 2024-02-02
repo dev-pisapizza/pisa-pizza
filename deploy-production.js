@@ -3,9 +3,10 @@ const { execSync } = require('child_process');
 try {
   console.log('Deploying to production...');
 
+  exec('git push origin develop --force-with-lease');
   exec('git checkout production');
   exec('git reset --hard develop');
-  exec('git push origin production --force');
+  exec('git push origin production --force-with-lease');
   exec('git checkout develop');
 
   console.log('\nDeployed successfully 🚀✅');
