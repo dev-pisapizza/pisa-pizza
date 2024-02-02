@@ -1,6 +1,6 @@
 # Pisa Pizza Schwaig (Website)
 
-> Production: https://test.pisa-pizza.de
+> Production: https://pisa-pizza.de
 
 > Development: https://dev-pisapizza.github.io/pisa-pizza/develop
 
@@ -32,7 +32,7 @@ Deploying to the development environment is easy, just commit and push to the **
 
 ### Production Environment
 
-> [https://test.pisa-pizza.de](https://test.pisa-pizza.de)
+> [https://pisa-pizza.de](https://pisa-pizza.de)
 
 1. Checkout the `develop` branch locally.
 2. Add your changes: `git add .`

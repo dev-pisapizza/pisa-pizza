@@ -22,10 +22,10 @@ jobs:
 
       - name: Build
         run: |
-          URL=https://test.pisa-pizza.de
+          URL=https://pisa-pizza.de
           npm run build --- --base-href /
           sed -i "s|{{URL}}|$URL|g" dist/pisa-pizza/sitemap.xml
-          echo "test.pisa-pizza.de" >> dist/pisa-pizza/CNAME
+          echo "pisa-pizza.de" >> dist/pisa-pizza/CNAME
 
       - name: Deploy Build
         uses: JamesIves/github-pages-deploy-action@v4
