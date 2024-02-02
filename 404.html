@@ -14,7 +14,7 @@
     // Group 1: https://pisa-pizza.de
     // Group 3: pizzas
     const urlEndings = ['pisa-pizza', 'develop', 'pisa-pizza.de', 'test.pisa-pizza.de'];
-    const pattern = new RegExp(`^(https:\/\/.*(${urlEndings.join('|')}))/(.*)`);
+    const pattern = new RegExp(`^(.*(${urlEndings.join('|')}))/(.*)`);
 
     const [, basePath, , pathAfterBasePath] = pattern.exec(url);
 
