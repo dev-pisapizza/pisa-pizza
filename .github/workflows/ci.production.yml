@@ -27,7 +27,7 @@ jobs:
           sed -i "s|{{URL}}|$URL|g" dist/pisa-pizza/sitemap.xml
           echo "test.pisa-pizza.de" >> dist/pisa-pizza/CNAME
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy Build
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -39,5 +39,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: ~src/404.html
+          folder: src/404
           branch: gh-pages
+          clean: 'false' # We don't want to remove the previously deployed files.
