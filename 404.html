@@ -1,0 +1,26 @@
+<script>
+  const currentUrl = window.location.href;
+
+  // e.g. `pizzas`
+  const inAppRoute = extractPathAfterKeySegment(currentUrl);
+
+  /*
+   * When the App is loaded, `src/app/app.component.ts` uses the `route` query
+   * parameter to route to the destination using the angular router.
+   */
+  const r = `${currentUrl}?route=${inAppRoute}`;
+
+  function extractPathAfterKeySegment(url) {
+    const pathname = new URL(url).pathname;
+    const segments = pathname.split('/').filter(Boolean); // Removes any empty strings from array
+
+    const lastKnownIndex = Math.max(
+      segments.lastIndexOf('develop'),
+      segments.lastIndexOf('pisa-pizza'),
+    );
+    // If found, return the concatenated segments right after the last known segment; otherwise, return null
+    return lastKnownIndex !== -1 && segments.length > lastKnownIndex + 1
+      ? segments.slice(lastKnownIndex + 1).join('/') // Join the segments back into a string
+      : null;
+  }
+</script>
