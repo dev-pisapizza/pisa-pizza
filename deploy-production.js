@@ -10,9 +10,7 @@ try {
   exec('git checkout develop');
 
   console.log('\nDeployed successfully 🚀✅');
-  console.log(
-    `- https://github.com/dev-pisapizza/pisa-pizza/actions?query=branch%3Apisa-pizza%2Fproduction++`,
-  );
+  console.log(`- https://github.com/dev-pisapizza/pisa-pizza/actions?query=branch%3Aproduction++`);
 } catch (error) {
   clearInterval(loadingAnimation); // Stop the loading animation
   console.error('\nError:', error.message);
