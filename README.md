@@ -2,7 +2,7 @@
 
 > Production: https://pisa-pizza.de
 
-> Development: https://dev-pisapizza.github.io/pisa-pizza/develop
+> Development: https://pisa-pizza.de/develop
 
 ## Installation
 
@@ -26,7 +26,7 @@ To change the menu (items, prices, descriptions, ...), edit the following files,
 
 ### Development Environment
 
-> [https://dev-pisapizza.github.io/pisa-pizza/develop](https://dev-pisapizza.github.io/pisa-pizza/develop)
+> [https://pisa-pizza.de/develop](https://pisa-pizza.de/develop)
 
 Deploying to the development environment is easy, just commit and push to the **develop** branch. The CI/CD will deploy automatically to GitHub Pages 🚀.
 
