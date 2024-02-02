@@ -1,0 +1,23 @@
+<script>
+  const notFoundUrl = window.location.href;
+  const { basePath, pathAfterBasePath } = destructUrl(notFoundUrl);
+
+  /*
+   * When the App is loaded, `src/app/app.component.ts` uses the `route` query
+   * parameter to route to the destination using the angular router.
+   */
+  const redirectUrl = `${basePath}?route=${pathAfterBasePath}`;
+  window.location = redirectUrl;
+
+  function destructUrl(url) {
+    // Match 1: https://pisa-pizza.de/pizzas
+    // Group 1: https://pisa-pizza.de
+    // Group 3: pizzas
+    const urlEndings = ['pisa-pizza', 'develop', 'pisa-pizza.de', 'test.pisa-pizza.de'];
+    const pattern = new RegExp(`^(https:\/\/.*(${urlEndings.join('|')}))/(.*)`);
+
+    const [, basePath, , pathAfterBasePath] = pattern.exec(url);
+
+    return { basePath, pathAfterBasePath };
+  }
+</script>
