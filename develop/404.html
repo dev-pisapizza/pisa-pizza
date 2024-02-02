@@ -1,0 +1,12 @@
+<script>
+  const baseUrl = '{{URL}}';
+
+  // e.g. `pizzas`
+  const inAppRoute = window.location.toString().slice(baseUrl.length);
+
+  /*
+   * When the App is loaded, `src/app/app.component.ts` uses the `route` query
+   * parameter to route to the destination using the angular router.
+   */
+  window.location = `${baseUrl}?route=${inAppRoute}`;
+</script>
