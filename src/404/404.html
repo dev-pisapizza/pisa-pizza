@@ -9,7 +9,7 @@
   const redirectUrl = `${basePath}?route=${pathAfterBasePath}`;
   window.location = redirectUrl;
 
-  function extractBasePath(notFoundUrl) {
+  function extractBasePath(url) {
     // Match 1: https://pisa-pizza.de/pizzas
     // Group 1: https://pisa-pizza.de
     // Group 3: pizzas
