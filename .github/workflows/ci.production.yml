@@ -34,8 +34,3 @@ jobs:
           folder: src/404
           branch: gh-pages
           clean: 'true'
-
-      - name: Deploy 404 Page
-        uses: ./.github/workflows/reusables/deploy-404.yml@production
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
