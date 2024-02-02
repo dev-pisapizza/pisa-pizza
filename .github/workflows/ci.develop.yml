@@ -32,7 +32,7 @@ jobs:
           folder: dist/pisa-pizza
           branch: gh-pages
           target-folder: develop
-          clean: 'true'
+          clean: 'false'
 
       - name: Deploy 404.html
         uses: JamesIves/github-pages-deploy-action@v4
@@ -40,3 +40,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           folder: src/404
           branch: gh-pages
+          clean: 'false'
