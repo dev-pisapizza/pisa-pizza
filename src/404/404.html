@@ -1,40 +1,22 @@
 <script>
-  const unknownUrl = window.location.href;
-  const basePath = extractBasePath(unknownUrl);
-
-  // e.g. `pizzas`
-  const redirectUrl = `${basePath}?route=${extractPathAfterBasePath(unknownUrl, basePath)}`;
+  const notFoundUrl = window.location.href;
+  const { basePath, pathAfterBasePath } = extractBasePath(notFoundUrl);
 
   /*
    * When the App is loaded, `src/app/app.component.ts` uses the `route` query
    * parameter to route to the destination using the angular router.
    */
+  const redirectUrl = `${basePath}?route=${pathAfterBasePath}`;
   window.location = redirectUrl;
 
-  function extractPathAfterBasePath(url, basePath) {
-    const basePathUrl = new URL(basePath);
-    const fullUrl = new URL(url);
+  function extractBasePath(notFoundUrl) {
+    // Match 1: https://pisa-pizza.de/pizzas
+    // Group 1: https://pisa-pizza.de
+    // Group 3: pizzas
+    const pattern = /(.*(pisa-pizza|develop|\.de))\/?(.*)/;
 
-    // Remove the basePath from the full URL to get the in-app route
-    let inAppRoute = fullUrl.pathname.replace(basePathUrl.pathname, '');
+    const [, basePath, , pathAfterBasePath] = pattern.exec(url);
 
-    // Ensure the inAppRoute does not start with a leading slash for consistency
-    if (inAppRoute.startsWith('/')) {
-      inAppRoute = inAppRoute.substring(1);
-    }
-
-    return inAppRoute;
-  }
-
-  function extractBasePath(url) {
-    const urlObj = new URL(url);
-    const segments = urlObj.pathname.split('/').filter(Boolean); // Removes any empty strings from array
-
-    // Determine the last relevant index for the base path
-    const lastRelevantIndex = Math.max(segments.indexOf('develop'), segments.indexOf('pisa-pizza'));
-    const basePathSegments = segments.slice(0, lastRelevantIndex + 1);
-
-    // Construct the base path by including the protocol, host, and the relevant segments
-    return `${urlObj.origin}/${basePathSegments.join('/')}`;
+    return { basePath, pathAfterBasePath };
   }
 </script>

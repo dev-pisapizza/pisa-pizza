@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  ubuntu-build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -25,6 +25,7 @@ jobs:
           URL=https://test.pisa-pizza.de
           npm run build --- --base-href /
           sed -i "s|{{URL}}|$URL|g" dist/pisa-pizza/sitemap.xml
+          echo "test.pisa-pizza.de" >> dist/pisa-pizza/CNAME
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
