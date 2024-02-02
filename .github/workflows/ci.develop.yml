@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          URL=https://dev-pisapizza.github.io/pisa-pizza/develop
+          URL=https://pisa-pizza.de/develop
           npm run build --- --base-href $URL/
 
       - name: Deploy Build
