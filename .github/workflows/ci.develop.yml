@@ -34,10 +34,7 @@ jobs:
           target-folder: develop
           clean: 'true'
 
-      - name: Deploy 404.html
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy 404 Page
+        uses: ./.github/workflows/reusables/deploy-404.yml@production
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: src/404.html
-          branch: gh-pages
-          clean: 'true'

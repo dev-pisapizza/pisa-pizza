@@ -27,18 +27,15 @@ jobs:
           sed -i "s|{{URL}}|$URL|g" dist/pisa-pizza/sitemap.xml
           echo "test.pisa-pizza.de" >> dist/pisa-pizza/CNAME
 
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          branch: gh-pages
-          folder: dist/pisa-pizza
-          clean: 'true'
-
       - name: Deploy 404.html
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          folder: ~src/404.html
+          folder: src/404
           branch: gh-pages
           clean: 'true'
+
+      - name: Deploy 404 Page
+        uses: ./.github/workflows/reusables/deploy-404.yml@production
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
