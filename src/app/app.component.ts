@@ -6,7 +6,7 @@ import { SwipeService } from './swipe.service';
 import { filter } from 'rxjs';
 
 // Disable right click.
-window.addEventListener('contextmenu', e => e.preventDefault());
+// window.addEventListener('contextmenu', e => e.preventDefault());
 
 const routes = ['pizzas', 'pasta', 'salads', 'packages', 'drinks'];
 
