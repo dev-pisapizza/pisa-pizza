@@ -22,7 +22,8 @@ jobs:
 
       - name: Build
         run: |
-          npm run build --- --base-href develop
+          URL=https://pisa-pizza.de/develop
+          npm run build --- --base-href $URL/
 
       - name: Deploy Build
         uses: JamesIves/github-pages-deploy-action@v4
