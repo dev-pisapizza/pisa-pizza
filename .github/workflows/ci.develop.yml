@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          npm run build --- --base-href /
+          npm run build --- --base-href develop/
 
       - name: Deploy Build
         uses: JamesIves/github-pages-deploy-action@v4
