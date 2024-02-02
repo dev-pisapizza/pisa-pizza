@@ -12,7 +12,6 @@ try {
   console.log('\nDeployed successfully 🚀✅');
   console.log(`- https://github.com/dev-pisapizza/pisa-pizza/actions?query=branch%3Aproduction++`);
 } catch (error) {
-  clearInterval(loadingAnimation); // Stop the loading animation
   console.error('\nError:', error.message);
   console.error('Deployment to production failed.');
 }
