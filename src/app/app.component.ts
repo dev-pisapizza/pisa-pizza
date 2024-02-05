@@ -1,12 +1,9 @@
 import { Component, HostListener, OnInit } from '@angular/core';
-import { CommonModule, NgIf } from '@angular/common';
+import { NgIf } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { AnnouncementsComponent } from './announcements/announcements.component';
 import { SwipeService } from './swipe.service';
 import { filter } from 'rxjs';
-
-// Disable right click.
-// window.addEventListener('contextmenu', e => e.preventDefault());
 
 const routes = ['pizzas', 'pasta', 'salads', 'packages', 'drinks'];
 

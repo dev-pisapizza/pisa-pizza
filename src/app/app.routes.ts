@@ -9,7 +9,7 @@ const baseTitle = 'Pisa Pizza Schwaig';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'pizzas',
+    component: PizzasComponent,
     pathMatch: 'full',
   },
   {
