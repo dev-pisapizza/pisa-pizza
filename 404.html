@@ -1,23 +1,37 @@
-<script>
-  const notFoundUrl = window.location.href;
-  const { basePath, pathAfterBasePath } = destructUrl(notFoundUrl);
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="../favicon.ico" />
+    <title>Page Not Found</title>
+  </head>
+  <body>
+    <h1>Page not found.</h1>
+    <p>The page you're looking for doesn't exist or has been moved.</p>
+    <a href="/">Go back home</a>
 
-  /*
-   * When the App is loaded, `src/app/app.component.ts` uses the `route` query
-   * parameter to route to the destination using the angular router.
-   */
-  const redirectUrl = `${basePath}?route=${pathAfterBasePath}`;
-  window.location = redirectUrl;
+    <script>
+      const notFoundUrl = window.location.href;
+      const { basePath, pathAfterBasePath } = destructUrl(notFoundUrl);
 
-  // at
-  function destructUrl(url) {
-    // Match 1: https://pisa-pizza.de/pizzas
-    // Group 1: https://pisa-pizza.de
-    // Group 3: pizzas
-    const pattern = /^(.*(pisa-pizza\.de|\/develop))\/(.*)/;
+      /*
+       * When the App is loaded, `src/app/app.component.ts` uses the `route` query
+       * parameter to route to the destination using the angular router.
+       */
+      const redirectUrl = `${basePath}?route=${pathAfterBasePath}`;
+      window.location = redirectUrl;
 
-    const [, basePath, , pathAfterBasePath] = pattern.exec(url);
+      // at
+      function destructUrl(url) {
+        // Match 1: https://pisa-pizza.de/pizzas
+        // Group 1: https://pisa-pizza.de
+        // Group 3: pizzas
+        const pattern = /^(.*(pisa-pizza\.de|\/develop))\/(.*)/;
 
-    return { basePath, pathAfterBasePath };
-  }
-</script>
+        const [, basePath, , pathAfterBasePath] = pattern.exec(url);
+
+        return { basePath, pathAfterBasePath };
+      }
+    </script>
+  </body>
+</html>
