@@ -4,5 +4,7 @@
     Kombinieren Sie Ihre Lieblings Pizzas, Pastas, Salate und Softdrinks in einem Paket und
     profitieren Sie von unseren Kombi-Angeboten.
   </div>
-  <app-package-card [package]="package" *ngFor="let package of packages"></app-package-card>
+  @for (package of packages; track package) {
+<app-package-card [package]="package"></app-package-card>
+}
 </div>

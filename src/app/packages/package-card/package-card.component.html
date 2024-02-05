@@ -1,28 +1,40 @@
 <div class="mt-2 p-2 package">
-  <div class="mb-1" *ngIf="package.tag">
-    <span *ngIf="package.tag === 'new'" class="badge badge-new">neu</span>
-    <span *ngIf="package.tag === 'bestseller'" class="badge badge-bestseller">Bestseller</span>
+  @if (package.tag) {
+<div class="mb-1">
+    @if (package.tag === 'new') {
+<span class="badge badge-new">neu</span>
+}
+    @if (package.tag === 'bestseller') {
+<span class="badge badge-bestseller">Bestseller</span>
+}
     <br />
   </div>
+}
   Nr. {{ package.id }}
   <br />
   <strong class="fs-18">{{ package.name }}</strong>
   <br />
   <span>{{ package.description }}</span>
   <br />
-  <ul *ngIf="package.description.includes('Pizza'); else simplePrice" class="prices-container">
-    <li *ngIf="package.price.normal">
+  @if (package.description.includes('Pizza')) {
+<ul class="prices-container">
+    @if (package.price.normal) {
+<li>
       {{ package.id == 'P2' ? 'Mit zwei kleinen Pizzas' : 'Mit kleiner Pizza' }} (Ø 28 cm):
       <span>{{ package.price.normal | appPrice }}</span>
     </li>
+}
     <li>
       {{ package.id == 'P2' ? 'Mit zwei großen Pizzas' : 'Mit großer Pizza' }} (Ø 32 cm):
       <span>{{ package.price.large | appPrice }}</span>
     </li>
   </ul>
-  <ng-template #simplePrice>
+} @else {
+
     <div class="mt-1">
       <span> {{ package.price.normal || package.price.large | appPrice }}</span>
     </div>
-  </ng-template>
+  
+}
+  
 </div>

@@ -1,6 +1,6 @@
-<ng-container *ngFor="let announcement of announcements">
+@for (announcement of announcements; track $index) {
   <app-announcement
     [announcement]="announcement"
     (close)="onAnnouncementClose(announcement)"
   ></app-announcement>
-</ng-container>
+}

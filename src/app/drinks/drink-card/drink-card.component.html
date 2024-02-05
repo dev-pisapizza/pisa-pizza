@@ -1,16 +1,22 @@
 <div class="mt-2 p-2 drink">
-  <div class="mb-1" *ngIf="drink.tag">
-    <span *ngIf="drink.tag === 'new'" class="badge badge-new">neu</span>
-    <span *ngIf="drink.tag === 'bestseller'" class="badge badge-bestseller">Bestseller</span>
-    <br />
-  </div>
+  @if (drink.tag) {
+    <div class="mb-1">
+      @if (drink.tag === 'new') {
+        <span class="badge badge-new">neu</span>
+      }
+      @if (drink.tag === 'bestseller') {
+        <span class="badge badge-bestseller">Bestseller</span>
+      }
+      <br />
+    </div>
+  }
   Nr. {{ drink.id }}
   <br />
   <strong class="fs-18">{{ drink.name }}</strong>
-  <ng-container *ngIf="drink.description">
+  @if (drink.description) {
     <br />
     {{ drink.description }}
-  </ng-container>
+  }
   <br />
   {{ drink.liters | appGermanNumber }}L
   <div class="mt-1">

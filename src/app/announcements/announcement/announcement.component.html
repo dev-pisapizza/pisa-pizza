@@ -1,13 +1,9 @@
 <div class="announcement mt-2">
-  <button
-    *ngIf="announcement.closeable"
-    (click)="onClose()"
-    type="button"
-    class="close-button"
-    aria-label="Close"
-  >
-    &times;
-  </button>
+  @if (announcement.closeable) {
+    <button (click)="onClose()" type="button" class="close-button" aria-label="Close">
+      &times;
+    </button>
+  }
   <p class="announcement-body ta-center">
     <strong>{{ announcement.description }}</strong>
   </p>

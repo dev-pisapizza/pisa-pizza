@@ -3,5 +3,8 @@
   <div class="ta-center">
     Erfrischen Sie sich mit unserer vielfältigen Auswahl an Getränken. Genuss pur!
   </div>
-  <app-drink-card [drink]="drink" *ngFor="let drink of drinks"></app-drink-card>
+
+  @for (drink of drinks; track drink.id) {
+    <app-drink-card [drink]="drink"></app-drink-card>
+  }
 </div>

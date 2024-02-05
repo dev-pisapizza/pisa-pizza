@@ -4,5 +4,7 @@
     Unsere Salate können mit Essig & Öl oder einem hausgemachten Joghurt Dressing angemacht werden.
   </div>
 
-  <app-salad-card [salad]="salad" *ngFor="let salad of salads"></app-salad-card>
+  @for (salad of salads; track salad) {
+<app-salad-card [salad]="salad"></app-salad-card>
+}
 </div>

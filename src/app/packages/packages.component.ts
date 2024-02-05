@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { packages } from './packages';
-import { CommonModule } from '@angular/common';
+
 import { PricePipe } from '../pipes/price.pipe';
 import { PackageCardComponent } from './package-card/package-card.component';
 
@@ -9,7 +9,7 @@ import { PackageCardComponent } from './package-card/package-card.component';
   templateUrl: 'packages.component.html',
   styleUrl: './packages.component.css',
   standalone: true,
-  imports: [CommonModule, PricePipe, PackageCardComponent],
+  imports: [PricePipe, PackageCardComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PackagesComponent {

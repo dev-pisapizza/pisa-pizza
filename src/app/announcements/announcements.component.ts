@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Announcement, announcements } from './announcements';
 import { AnnouncementComponent } from './announcement/announcement.component';
@@ -6,7 +6,7 @@ import { AnnouncementComponent } from './announcement/announcement.component';
 @Component({
   selector: 'app-announcements',
   standalone: true,
-  imports: [CommonModule, AnnouncementComponent],
+  imports: [AnnouncementComponent],
   templateUrl: './announcements.component.html',
   styleUrl: './announcements.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
