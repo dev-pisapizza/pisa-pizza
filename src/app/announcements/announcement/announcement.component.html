@@ -1,10 +1,8 @@
-<div class="announcement mt-2">
+<div class="announcement mt-2 mb-2">
   @if (announcement.closeable) {
     <button (click)="onClose()" type="button" class="close-button" aria-label="Close">
       &times;
     </button>
   }
-  <p class="announcement-body ta-center">
-    <strong>{{ announcement.description }}</strong>
-  </p>
+  <div class="ta-center announcement-content" [innerHTML]="announcement.description"></div>
 </div>
