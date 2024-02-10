@@ -5,7 +5,7 @@ import { PastaComponent } from './pasta/pasta.component';
 import { PizzasComponent } from './pizzas/pizzas.component';
 import { SaladsComponent } from './salads/salads.component';
 
-const baseTitle = 'Pisa Pizza Schwaig';
+const baseTitle = 'Pisa Pizza';
 export const routes: Routes = [
   {
     path: '',
