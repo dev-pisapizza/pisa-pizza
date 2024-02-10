@@ -1,4 +1,5 @@
 const { execSync } = require('child_process');
+const os = require('os');
 
 try {
   console.log('Deploying to production...');
@@ -17,9 +18,11 @@ try {
 }
 
 function exec(cmd, quiet = true) {
+  const isWindows = os.platform() === 'win32';
   if (quiet) {
-    execSync(`${cmd} > /dev/null 2>&1 || true`);
+    const redirect = isWindows ? '> NUL 2>&1' : '> /dev/null 2>&1';
+    execSync(`${cmd} ${redirect}`, { stdio: 'ignore', shell: isWindows ? 'cmd.exe' : '/bin/sh' });
   } else {
-    execSync(cmd);
+    execSync(cmd, { stdio: 'inherit', shell: isWindows ? 'cmd.exe' : '/bin/sh' });
   }
 }
