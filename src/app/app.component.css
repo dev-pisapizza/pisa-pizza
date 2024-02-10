@@ -21,7 +21,9 @@
   margin: auto;
   margin-top: 0;
   height: 100%;
-  padding: 20px 5px 15px 5px;
+  padding: 10px 5px;
+  padding-bottom: 17px;
+  padding-top: 25px;
   text-align: center;
 }
 
@@ -29,12 +31,12 @@
   font-size: 42px;
   margin: 0;
   text-shadow: 1px 1px 1px rgb(60, 60, 60);
-  line-height: 1;
+  line-height: 0.9;
 }
 
 .header-subtitle {
   font-weight: 700;
-  color: rgb(70, 70, 70);
+  color: rgb(60, 60, 60);
   margin: 0;
 }
 
@@ -69,7 +71,6 @@
   padding: 10px;
   cursor: pointer;
   border-radius: 5px;
-  font-weight: 500;
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -84,6 +85,7 @@
   background-attachment: local;
   opacity: 1;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Kalam Bold';
 }
 
 .link.active span {
@@ -115,11 +117,12 @@ ul {
 }
 
 .phone-number {
-  font-size: 24px;
+  font-size: 21px;
   color: rgb(60, 60, 60);
   font-weight: 700;
   animation: heartbeat 700ms ease-in-out;
   animation-delay: 1s;
+  font-family: 'Kalam Bold';
   display: inline-block; /* This is important for span */
 }
 

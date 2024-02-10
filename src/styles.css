@@ -3,6 +3,11 @@
   src: url(./assets/fonts/kalam.woff2) format('woff2');
 }
 
+@font-face {
+  font-family: 'Kalam Bold';
+  src: url(./assets/fonts/kalam-bold.woff2) format('woff2');
+}
+
 :root {
   --green: #2ec96f;
   --white: #ffffff;
@@ -34,17 +39,19 @@ h1,
 h2,
 h3,
 strong {
-  font-family: 'Kalam';
+  font-family: 'Kalam Bold';
+  line-height: 1.4;
+  font-weight: 700;
 }
 
 h1 {
-  font-size: 24px;
-}
-h2 {
   font-size: 22px;
 }
-h3 {
+h2 {
   font-size: 20px;
+}
+h3 {
+  font-size: 18px;
 }
 
 [class^='p-'],
@@ -117,10 +124,6 @@ h3 {
 }
 .badge-bestseller {
   background-color: var(--red);
-}
-
-.cool-font {
-  font-family: 'Kalam', sans-serif;
 }
 
 .card-description {
