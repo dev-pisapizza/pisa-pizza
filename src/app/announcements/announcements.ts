@@ -8,9 +8,9 @@ export interface Announcement {
 export const announcements: Announcement[] = [
   {
     description:
-      'Unsere Pizzeria ist vom <strong>03.03 - 05.03.2024</strong> geschlossen. Wir sind ab dem <strong>6. März</strong> wieder für Sie da!',
-    showFromDate: '24.12.2023',
-    showUntilDate: '01.03.2024',
+      'Unsere Pizzeria ist vom <strong>11.03 - 05.03.2024</strong> geschlossen. Wir sind ab dem <strong>6. März</strong> wieder für Sie da!',
+    showFromDate: '24.12.2023', // ab wann
+    showUntilDate: '11.02.2024', // bis wann
     closeable: false,
   },
 ];
