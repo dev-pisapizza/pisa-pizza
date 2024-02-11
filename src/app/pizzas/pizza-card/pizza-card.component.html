@@ -1,34 +1,34 @@
 <div class="mt-2 p-2 pizza">
   @if (pizza.tag) {
-<div class="mb-1">
-    @if (pizza.tag === 'new') {
-<span class="badge badge-new">neu</span>
-}
-    @if (pizza.tag === 'bestseller') {
-<span class="badge badge-bestseller">Bestseller</span>
-}
-  </div>
-}
+    <div class="mb-1">
+      @if (pizza.tag === 'new') {
+        <span class="badge badge-new">neu</span>
+      }
+      @if (pizza.tag === 'bestseller') {
+        <span class="badge badge-bestseller">Bestseller</span>
+      }
+    </div>
+  }
   Nr. {{ pizza.id }}
   <br />
-  <strong class="fs-18">{{ pizza.name }}</strong>
+  <strong>{{ pizza.name }}</strong>
   <br />
   <span [innerHTML]="pizza.description"></span>
   <ul class="prices-container">
     @if (pizza.price.small) {
-<li>
-      Klein (Ø 28 cm): <span> {{ pizza.price.small | appPrice }}</span>
-    </li>
-}
+      <li>
+        Klein (Ø 28 cm): <span> {{ pizza.price.small | appPrice }}</span>
+      </li>
+    }
     @if (pizza.price.large) {
-<li>
-      Groß (Ø 32 cm): <span> {{ pizza.price.large | appPrice }}</span>
-    </li>
-}
+      <li>
+        Groß (Ø 32 cm): <span> {{ pizza.price.large | appPrice }}</span>
+      </li>
+    }
     @if (pizza.price.party) {
-<li>
-      Party (60 x 40 cm): <span> {{ pizza.price.party | appPrice }}</span>
-    </li>
-}
+      <li>
+        Party (60 x 40 cm): <span> {{ pizza.price.party | appPrice }}</span>
+      </li>
+    }
   </ul>
 </div>

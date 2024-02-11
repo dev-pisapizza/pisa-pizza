@@ -1,18 +1,18 @@
 <div class="mt-2 p-2 salad">
   @if (salad.tag) {
-<div class="mb-1">
-    @if (salad.tag === 'new') {
-<span class="badge badge-new">neu</span>
-}
-    @if (salad.tag === 'bestseller') {
-<span class="badge badge-bestseller">Bestseller</span>
-}
-    <br />
-  </div>
-}
+    <div class="mb-1">
+      @if (salad.tag === 'new') {
+        <span class="badge badge-new">neu</span>
+      }
+      @if (salad.tag === 'bestseller') {
+        <span class="badge badge-bestseller">Bestseller</span>
+      }
+      <br />
+    </div>
+  }
   Nr. {{ salad.id }}
   <br />
-  <strong class="fs-18">{{ salad.name }}</strong>
+  <strong>{{ salad.name }}</strong>
   <br />
   <span [innerHTML]="salad.description"></span>
   <div class="mt-1">

@@ -1,18 +1,18 @@
 <div class="mt-2 p-2 pasta">
   @if (pasta.tag) {
-<div class="mb-1">
-    @if (pasta.tag === 'new') {
-<span class="badge badge-new">neu</span>
-}
-    @if (pasta.tag === 'bestseller') {
-<span class="badge badge-bestseller">Bestseller</span>
-}
-    <br />
-  </div>
-}
+    <div class="mb-1">
+      @if (pasta.tag === 'new') {
+        <span class="badge badge-new">neu</span>
+      }
+      @if (pasta.tag === 'bestseller') {
+        <span class="badge badge-bestseller">Bestseller</span>
+      }
+      <br />
+    </div>
+  }
   Nr. {{ pasta.id }}
   <br />
-  <strong class="fs-18">{{ pasta.name }}</strong>
+  <strong>{{ pasta.name }}</strong>
   <br />
   <span [innerHTML]="pasta.description"></span>
   <div class="mt-1">
