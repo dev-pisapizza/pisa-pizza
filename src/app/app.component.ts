@@ -35,8 +35,9 @@ export class AppComponent implements OnInit {
       this.router.navigateByUrl(`/${route}`);
     }
 
-    this.swipeService.swipeRight$.subscribe(() => this.onLeftSwipe());
-    this.swipeService.swipeLeft$.subscribe(() => this.onRightSwipe());
+    // Uncomment to enable swipe feature.
+    // this.swipeService.swipeRight$.subscribe(() => this.onLeftSwipe());
+    // this.swipeService.swipeLeft$.subscribe(() => this.onRightSwipe());
   }
 
   onLeftSwipe() {
