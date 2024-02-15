@@ -2,7 +2,6 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { AnnouncementsComponent } from './announcements/announcements.component';
-import { SwipeService } from './swipe.service';
 import { filter } from 'rxjs';
 
 const routes = ['pizzas', 'pasta', 'salads', 'packages', 'drinks'];
@@ -18,10 +17,7 @@ export class AppComponent implements OnInit {
   windowScrolled = false;
   currentUrl = '';
 
-  constructor(
-    private readonly router: Router,
-    private readonly swipeService: SwipeService,
-  ) {
+  constructor(private readonly router: Router) {
     router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
       // Update your active link logic
       this.currentUrl = event.urlAfterRedirects;
@@ -34,10 +30,6 @@ export class AppComponent implements OnInit {
     if (route) {
       this.router.navigateByUrl(`/${route}`);
     }
-
-    // Uncomment to enable swipe feature.
-    // this.swipeService.swipeRight$.subscribe(() => this.onLeftSwipe());
-    // this.swipeService.swipeLeft$.subscribe(() => this.onRightSwipe());
   }
 
   onLeftSwipe() {
